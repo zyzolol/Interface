@@ -1,0 +1,241 @@
+﻿TODO
+update readme on how to use "Super" macros
+support Bongos, Bartender, etc.
+in-game help frame?
+in-game keybind
+
+VERSION HISTORY
+4.03a
+fixed black text in regular macro box
+
+4.03
+new slash command /opt [option] command (see functions.txt on usage) (inspired by CogWheel's MacroTalk)
+use MoveAnything's GameMenu_AddButton to place SuperMacro menu button (not shown unless you turn on Show menu button in SuperMacro options)
+resized GameMenuButtonSuperMacro
+new file to hold some macro examples: examples.txt
+
+
+4.02a
+fixed bad argument #1 to 'gsub' (string expected, got nil) (SuperMacro.lua: SM_FindSpell)
+improved macro tooltip
+tooltip force show if no text (eg #showtooltip none)
+fixed count not displayed for items
+fixed rogue change stealth bar (can't hook GetActionTexture)
+removed hook GetActionTexture
+removed hook ActionButton:OnLeave script handler
+optimized SM_ActionButton_OnUpdate, limited update rate
+
+4.02
+fixed attempt to index global 'this' (a nil value) (SM_Super.lua: GetActionText)
+recreate Clicks when editing macro name, icon
+added hook to GetActionTexture,GetActionCount
+moved old GetActionCooldown code to SM_ActionButton_OnUpdate and
+rewrote hooks to GetActionCooldown,IsActionInRange,IsUsableAction
+SM_ActionButton_SetTooltip now hooks securely to ActionButton_SetTooltip
+ActionButton_UpdateCount now does nothing (otherwise skips macros)
+update evaluate cast options to be based on SecureCmdOptionHandlers (ChatFrame.lua)
+added cast options: [no/party], [no/raid], [no/dead], [no/indoors], [no/outdoors], [no/group], [group:party/raid], [button:id/s]
+use SecureCmdOptionParse instead of SM_EvalCastOptions, which is now commented out
+
+4.01
+fixed bad argument #1 to 'gsub' (string expected, got nil) (SM_Super.lua :88, 155)
+check body from /click lines
+replace IsActionInRange, IsUsableAction with spell, item range, usable, nomana
+check [no/channeling], [channeling:spell]
+
+4.0
+separate macro and supermacro Click creation
+fixed SuperMacroClicks no text on login
+really hide Click buttons
+create Click buttons based on macronames, i.e. /click MacroClick_macroname or /click SuperMacroClick_macroname, e.g. /click MacroClick_backstab
+turn all [options] into lowercase before check
+fixed GetContainerItemCooldown usage (SM_Tooltip.lua) (2nd try) (hopefully).
+show key ring and bank items (/use -2 X or -1 X)
+find items in /equip, /equipslot
+find items, spells in /castsequence
+moved version history to change.log
+updated readme.txt instructions
+
+3.18
+fixed GetContainerItemCooldown usage (SM_Tooltip.lua) (hopefully)
+creates hidden secure action buttons that store the macro body text for all macros and supermacros. thus, instead of /macro or RunMacro(), you should now use /click MacroClickN or /click SuperMacroClickN, where N is the corresponding number in the SuperMacroFrame.
+
+3.17
+fixed replace IsSpellPassive to IsPassiveSpell
+don't find spell for CastSpellByName, CastSpell, cast()
+don't find item for UseItemByName, use()
+find spell or item based on first thing that appears in macro body
+finding items now check inventory slot nicknames, eg /use mainhandslot
+check /cast [options], including [target="unit"], [no/exists], [no/help], [no/harm], [no/combat], [equipped:item], [actionbar:page/s], [stance:id/s], [no/stance], [no/stealth], [no/swimming], [no/flying], [no/mounted], [no/pet], [pet:name/family], [no/modifier], [modifier:shift/ctrl/alt]
+
+3.16d
+fixed GetActionCooldown attempt to concatenate a nil value (pic)
+
+3.16c next release
+fixed GetActionCooldown attempt to concatenate a nil value (counttext)
+fixed BonusActionButtonBar not flipping. Replaced GetActionTexture with SM_ActionButton_Update (SM_Super.lua)
+
+3.16b
+fixed blocked action on PickupInventoryItem (eg rogue poison, apply kits)
+fixed GetActionCooldown attempt to concatenate a nil value (this:GetName())
+fixed changed PaperDollItemSlotButton_OnClick to PaperDollItemSlotButton_OnModifiedClick
+
+3.16a
+convert aliases when dropping supermacros onto action buttons
+assign macrotext to buttons on login
+
+3.16
+update toc 20000
+SM_UpdateAction use PreClick instead of OnClick. (SuperMacro.lua)
+spell and item buttons alter ModifiedClick instead of OnClick. (SM_ItemLink.lua)
+removed hook UseAction. (SM_Super.lua)
+removed bindings attack, petattack
+added binding /smacro
+check [options] in /cast for tooltip, etc.
+removed functions and slash commands now found in default UI (localization.lua, SM_Slash.lua)
+added /rl slash command to reload ui
+
+3.15 beta 3
+fixed: if shift key, then insert tradeskill info (not link). eg Smelt Copper, not Copper Bar. hold alt key for item's link, which has not changed. eg [Copper Bar].
+create action buttons attached to UIParent that can be clicked to run a macro
+
+3.15 beta 2
+FindItem totalcount doesn't count bank items
+If count==0 then set texture darker and count shows 0
+fixed: will always try to get first item cooldown in series of /use, use(), UseItemByName, etc., whenever bag count changes
+
+3.15 beta 1
+fixed: FindFirstItem returns correct info for use( %d [,%d]) and /use %d [, %d]
+fixed: FindFirstSpell returns correct info for /cast
+fixed: /use item to show item's info
+fixed: /cast spell to show spell's info for (minor) etc.
+fixed: GetSpellCooldown error popup for SM_Channel()
+option to hide menu button
+option to wrap long sentences (won't work until they add EditBox:SetNonSpaceWrap() )
+slash command to run super macro /smacro
+register events to run macros. see functions.txt for RegisterEventMacro and UnregisterEventMacro.
+Ex. RegisterEventMacro( "ding", 1, "PLAYER_LEVEL_UP"); -- do something whenever you level up
+ViewEventMacro() prints the events table
+remove virtual templates from toc (Fonts.xml, UIPanelTemplates.xml, ClassTrainerFrameTemplates.xml)
+
+3.14a
+fixed: count should show totalcount in all bags and slots
+
+3.14
+Include alias replacement from other mods (eg ASF, ChatAlias)
+for any other alias addons, do SM_InsertAliasFunction(your_replacement_function, pos) inside your mod. pos must be -1 if the function removes newlines; otherwise leave out pos. make sure SuperMacro is loaded when this insertion is called, so make SM an optional dependency or after VARIABLES_LOADED.
+stretched popup frame by two rows
+fixed: tooltip with macro code still appear after leaving action button
+fixed: sayrandom error
+hide action text on discord bars
+make minimap button toplevel
+brighten rank text on tooltips
+new function CancelBuff, unbuff, /unbuff, /smunbuff
+fixed: set owner for SM_Tooltip
+fixed: FindBuff should work better
+
+3.13
+fixed: SM_Tooltip.lua:131: `then' expected near `return'
+
+3.12
+fixed: this is nil: SM_tooltip.lua line 81
+fixed: body is nil for FindFirstSpell and FindFirstItem
+caststop(spell [,...]) put in functions.txt
+
+3.11
+text and texture for supers returned for non-default action buttons.
+tooltip for supers on action buttons.
+optimize tooltip, cooldown and icon replacement.
+per-character settings for supers on action bars.
+option to check cooldown (may decrease framerate). must be on for auto-replace icons to work properly.
+
+3.1 changes
+change Print to Printd, other addons retain their Print if present, else Print works like Printd
+Ctrl-Shift-click on spell in spellbook to insert "<spellname>(<spellrank>)" (with quotes).
+Alt-Shift-click on spell in spellbook to insert <spellname>(<spellrank>) (without quotes).
+Shift-click on item or tradeskill will insert name, and Ctrl-Shift-click will insert the name inside quotes.
+CraftItem( skill, item, count), /craft, /smcraft
+SayRandom(...), /sayrandom, /smsayrandom
+Super tab to hold virtual macros (aka Super ones). You can make an unlimited number of "Super" macros, and each Super will hold 7000 characters. Drag them onto action bar as usual. Downside is you can't tell range or IsUsable from action buttons (won't fade out). Cooldown and tooltip still work.
+There are new key bindings for the first ten SuperMacros. You can make your own bindings by copying the format of the default ones in Bindings.xml in SuperMacro folder. You could backup your old Bindings.xml and copy over the new bindings.
+Function to run a Super is RunSuperMacro(supername | index).
+Ex. RunSuperMacro(1);
+Ex. RunSuperMacro("MySuperMacro");
+You can place SuperMacros on action buttons, but swapping them around is not perfect. These problems may not be not fixable with LUA.
+Read functions.txt for further explanations of these new commands: CraftItem, SayRandom, RunSuperMacro.
+
+3.04 changes
+fixed bug: tooltip
+fixed bug: update buttons
+SM_CastSpell renamed SM_FindSpell
+
+3.03 changes
+fixed bug: cooldown
+fixed bug: /cast
+moved menu button
+
+3.0 changes
+for 1.9 patch
+lost blizzard_macroui dependency
+lost unlimited macros
+shortened versions of common functions (eg cast, stopcast, use, echo, send, pickup). read functions.txt
+options frame
+/supermacro options to open options frame
+minimap button (optional)
+tooltip, cooldown, and count about items and spells (tooltip optional)
+action buttons replaced with appropriate icons (optional)
+game menu button below Keybindings and above Macros
+tooltip support for discordactionbars (untested)
+documentation for user-friendly functions in functions.txt
+SM_Channel(spell) for uninterrupted channeling, /smchan, /smchannel
+/in seconds[+] command, /smin, SM_IN(seconds, command[, repeat])
+/shift form
+Right-click macro button in SuperMacro frame to run macro.
+
+2.89 change
+fixed self-cast
+fixed item link from tradeskill
+functions.txt lists convenient functions and slash commands
+imported some functions from 1900 series
+new functions: DoOrder, Pass, Fail
+
+2.85 changes
+fixed sending chat messages with \n from RunMacro
+remove editing CastSpellByName
+/cast to cast highest ranking spell if no rank specified
+allows alias in macro (need more testing) [using my other addon Alias-Spellchecker aka ASF]
+switch macros on actionbar with SetActionMacro( actionid, macro )
+
+2.8 changes
+actionbarbutton macro tooltips enhanced to show spell and/or macro code
+slash command for macrotip options
+fixed behavior regarding ingame extend
+macroframe framestrata changed to high
+
+2.7 changes
+in-game extend code increased to 7000 characters (instead of 900)
+shows extend character limit
+## OptionalDeps: Blizzard_MacroUI
+
+## 2.6 changes
+added Macro() function:
+Macro = RunMacro;
+in-game extend editor (not same as SM_EXTEND.lua):
+scripts written with in-game extend are saved in SavedVariables under SuperMacro.lua
+
+## 2.5 changes
+Max macro length decreased from 1023 to 256.
+Interface updated to show 256 limit.
+Makes use of SM_Extend.lua.
+Due to the max macro length being shortened, make a file called SM_Extend.lua to define long functions and global variables, then call them from your macros. See example above (FindTradeSkillIndex).
+
+## 2.4 changes
+Item link to MacroFrame from container frame items, paperdoll items, bagslots, tradeskills using Alt-click.
+Item link to ChatFrameEditBox from tradeskills using Shift-click.
+Slash commands for using and equipping items.
+/use,/smuse <item_name>
+/equip,/smequip,/eq,/smeq <item_name>
+/equipoff,/smequipoff,/eqoff,/smeqoff <item_name> to equip offhand
+/unequip,/smunequip,/uneq,/smuneq <item_name>
+/print,/smprint <text> to display text into chat frame.
+/supermacro printcolor <red> <green> <blue> to change color used in /print.

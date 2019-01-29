@@ -1,0 +1,18 @@
+------------------------------------------------------------------------
+r76993 | Timewasted | 2008-06-18 02:19:26 -0400 (Wed, 18 Jun 2008) | 2 lines
+Changed paths:
+   M /trunk/DrummerBoy
+
+DrummerBoy:
+- Fix externals
+------------------------------------------------------------------------
+r76990 | Timewasted | 2008-06-18 01:46:56 -0400 (Wed, 18 Jun 2008) | 2 lines
+Changed paths:
+   A /trunk/DrummerBoy
+   A /trunk/DrummerBoy/DrummerBoy.lua
+   A /trunk/DrummerBoy/DrummerBoy.toc
+   A /trunk/DrummerBoy/embeds.xml
+
+DrummerBoy:
+- Initial commit
+------------------------------------------------------------------------

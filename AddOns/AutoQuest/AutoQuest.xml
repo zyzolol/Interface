@@ -1,0 +1,21 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	
+	<Script file="AutoQuest.lua"/>
+
+	<Frame name="AutoQuest">
+		<Scripts>
+			<OnLoad>
+				AutoQuest_Onload();  
+				
+			</OnLoad>
+			<OnEvent>
+				AutoQuest_Onevent(event);
+				
+			</OnEvent>
+		</Scripts>
+	</Frame>
+	
+
+</Ui>

@@ -1,0 +1,7 @@
+## Interface: 20300
+## Title: LightHeaded_deDE_Data
+## Notes: Contains mappings from deDE quest titles, to enUS quest titles
+## RequiredDeps: LightHeaded
+## LoadOnDemand: 1
+
+..\LightHeaded\Data\LH_Titles_deDE.lua

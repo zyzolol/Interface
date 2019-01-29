@@ -1,0 +1,77 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<Script file="ClassIcons.lua"/>
+	
+	<Frame name="TargetClassIconTemplate" level="OVERLAY" hidden="true" virtual="true">
+		<Size>
+			<AbsDimension x="22" y="22"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension x="-95" y="-6"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Layers>
+			<Layer>
+				<Texture name="$parentTexture"/>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				this:SetFrameLevel(this:GetFrameLevel()+2);
+			</OnLoad>
+			<OnEvent>
+				ClassIcons_OnEvent(event);
+			</OnEvent>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="PartyClassIconTemplate" level="OVERLAY" hidden="true" virtual="true">
+		<Size>
+			<AbsDimension x="14" y="14"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+				<Offset>
+					<AbsDimension x="34" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Layers>
+			<Layer>
+				<Texture name="$parentTexture"/>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				this:RegisterEvent("PARTY_MEMBERS_CHANGED");
+				this:SetFrameLevel(this:GetFrameLevel()+2);
+			</OnLoad>
+			<OnEvent>
+				ClassIcons_OnEvent(event);
+			</OnEvent>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="$parentClassIcon" inherits="TargetClassIconTemplate" parent="TargetFrame">
+		<Scripts>
+			<OnLoad>
+				this:RegisterEvent("PLAYER_TARGET_CHANGED");
+			</OnLoad>
+		</Scripts>
+	</Frame>
+	<Frame name="$parentClassIcon" inherits="TargetClassIconTemplate" parent="FocusFrame">
+		<Scripts>
+			<OnLoad>
+				this:RegisterEvent("PLAYER_FOCUS_CHANGED");
+			</OnLoad>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="$parentClassIcon" inherits="PartyClassIconTemplate" parent="PartyMemberFrame1" id="1" />
+	<Frame name="$parentClassIcon" inherits="PartyClassIconTemplate" parent="PartyMemberFrame2" id="2" />
+	<Frame name="$parentClassIcon" inherits="PartyClassIconTemplate" parent="PartyMemberFrame3" id="3" />
+	<Frame name="$parentClassIcon" inherits="PartyClassIconTemplate" parent="PartyMemberFrame4" id="4" />
+</Ui>

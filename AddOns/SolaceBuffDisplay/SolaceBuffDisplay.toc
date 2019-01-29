@@ -1,0 +1,9 @@
+## Interface: 20430
+## Title: SolaceBuffDisplay
+## Notes: Configurable buff and debuff display for the default Party Frames, and other options.
+## Version: 2.4.3-r1
+## Author: Hallithron
+## SavedVariablesPerCharacter: SPB_Options, SolaceTargetOptions
+
+SolaceLib\SolaceLib.lua
+SolaceBuffDisplay.xml

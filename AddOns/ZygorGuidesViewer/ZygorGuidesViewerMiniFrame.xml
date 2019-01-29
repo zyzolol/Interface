@@ -1,0 +1,246 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<Script file="ZygorGuidesViewerMiniFrame.lua"/>
+
+	<Frame name="ZygorGuidesViewerMiniFrame" toplevel="true" hidden="true" frameStrata="MEDIUM" parent="UIParent" movable="true" resizable="true" clampedToScreen="true">
+		<Scripts>
+			<OnEvent>
+				ZygorGuidesViewerMiniFrame_OnEvent(event);
+			</OnEvent>
+			<OnLoad>
+				ZygorGuidesViewerMiniFrame_OnLoad();
+			</OnLoad>
+			<OnShow>
+				ZygorGuidesViewerMiniFrame_OnShow()
+			</OnShow>
+			<OnHide>
+				ZygorGuidesViewerMiniFrame_OnHide()
+			</OnHide>
+			<OnMouseWheel>
+				return;
+			</OnMouseWheel>
+			<OnSizeChanged>
+				ZygorGuidesViewerMiniFrame_Text:SetWidth(ZygorGuidesViewerMiniFrame:GetWidth()-10)
+			</OnSizeChanged>
+			<OnMouseDown> ZygorGuidesViewerMiniFrame:StartMoving();  </OnMouseDown>
+			<OnMouseUp>  ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnMouseUp>
+			<OnDragStop> ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnDragStop>
+		</Scripts>
+		<Anchors><Anchor point="CENTER" relativePoint="CENTER" /></Anchors>
+		<Size><AbsDimension x="320" y="100"/></Size>
+
+		<Frames>
+			<Frame name="$parent_Border">
+				<Size><AbsDimension x="0" y="20"/></Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+				</Anchors>
+				<Backdrop qbgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<BackgroundInsets>
+						<AbsInset left="4" right="4" top="4" bottom="4" />	
+					</BackgroundInsets>
+					<TileSize>
+						<AbsValue val="16" />
+					</TileSize>
+					<EdgeSize>
+						<AbsValue val="16" />
+					</EdgeSize>
+				</Backdrop>
+			</Frame>
+
+			<Frame name="$parent_ResizerBottom">
+				<Size><AbsDimension x="5" y="5"/></Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="5" y="0"/></Offset></Anchor>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"><Offset><AbsDimension x="-5" y="0"/></Offset></Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseDown> ZygorGuidesViewerMiniFrame:StartSizing("BOTTOM");  </OnMouseDown>
+					<OnMouseUp>  ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnMouseUp>
+					<OnDragStop> ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnDragStop>
+				</Scripts>
+			</Frame>
+			
+			<Frame name="$parent_ResizerBottomLeft">
+				<Size><AbsDimension x="10" y="10"/></Size>
+				<Anchors><Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT"/></Anchors>
+				<Scripts>
+					<OnMouseDown> ZygorGuidesViewerMiniFrame:StartSizing("BOTTOMLEFT");  </OnMouseDown>
+					<OnMouseUp>  ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnMouseUp>
+					<OnDragStop> ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnDragStop>
+				</Scripts>
+			</Frame>
+			
+			<Frame name="$parent_ResizerBottomRight">
+				<Size><AbsDimension x="10" y="10"/></Size>
+				<Anchors><Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/></Anchors>
+				<Scripts>
+					<OnMouseDown> ZygorGuidesViewerMiniFrame:StartSizing("BOTTOMRIGHT");  </OnMouseDown>
+					<OnMouseUp>  ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnMouseUp>
+					<OnDragStop> ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnDragStop>
+				</Scripts>
+			</Frame>
+			
+			<Frame name="$parent_ResizerLeft">
+				<Size><AbsDimension x="5" y="5"/></Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="0" y="5"/></Offset></Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseDown> ZygorGuidesViewerMiniFrame:StartSizing("LEFT");  </OnMouseDown>
+					<OnMouseUp>  ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnMouseUp>
+					<OnDragStop> ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnDragStop>
+				</Scripts>
+			</Frame>
+			
+			<Frame name="$parent_ResizerRight">
+				<Size><AbsDimension x="5" y="5"/></Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"/>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"><Offset><AbsDimension x="0" y="5"/></Offset></Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseDown> ZygorGuidesViewerMiniFrame:StartSizing("RIGHT");  </OnMouseDown>
+					<OnMouseUp>  ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnMouseUp>
+					<OnDragStop> ZygorGuidesViewerMiniFrame:StopMovingOrSizing(); </OnDragStop>
+				</Scripts>
+			</Frame>
+			
+			<Button name="$parentCloseButton" inherits="UIPanelCloseButton">
+				<Anchors><Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="3" y="3"/></Offset></Anchor></Anchors>
+			</Button>
+
+			<Button name="$parent_MiniButton">
+				<Size><AbsDimension x="20" y="20"/></Size>
+				<Scripts>
+					<OnClick>						if ZygorGuidesViewer then ZygorGuidesViewer:ToggleMini() end					</OnClick>
+				</Scripts>
+				<Anchors><Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-24" y="-3"/></Offset></Anchor></Anchors>
+				<NormalTexture file="Interface\AddOns\ZygorGuidesViewer\Skin\minimize-up-up"><TexCoords left="0.2" right="0.8" top="0.2" bottom="0.8"/></NormalTexture>
+				<PushedTexture file="Interface\AddOns\ZygorGuidesViewer\Skin\minimize-up-down"><TexCoords left="0.2" right="0.8" top="0.2" bottom="0.8"/></PushedTexture>
+				<HighlightTexture file="Interface\AddOns\ZygorGuidesViewer\Skin\minimize-hi" alphaMode="ADD"><TexCoords left="0.2" right="0.8" top="0.2" bottom="0.8"/></HighlightTexture>
+			</Button>
+
+			<Button name="$parent_PrevButton" inherits="UIPanelButtonTemplate" text="&lt;">
+				<Size><AbsDimension x="20" y="20"/></Size>
+				<Anchors><Anchor point="TOPLEFT" relativeTo="$parent_SectionTitle" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="3" y="-3"/></Offset></Anchor></Anchors>
+				<Scripts>
+					<OnClick>								if ZygorGuidesViewer then ZygorGuidesViewer:SkipStep(-1,true) end							</OnClick>
+				</Scripts>
+			</Button>
+
+			<Button name="$parent_NextButton" inherits="UIPanelButtonTemplate" text="&gt;">
+				<Size><AbsDimension x="20" y="20"/></Size>
+				<Anchors><Anchor point="LEFT" relativeTo="$parent_PrevButton" relativePoint="RIGHT"><Offset><AbsDimension x="3" y="0"/></Offset></Anchor></Anchors>
+				<Scripts>
+					<OnClick>						if ZygorGuidesViewer then ZygorGuidesViewer:SkipStep(1,true) end					</OnClick>
+				</Scripts>
+			</Button>
+
+		</Frames>
+
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parent_Background">
+					<Color r="0" g="0" b="0" a="1" /> 
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT"><Offset><AbsDimension x="4" y="-4"/></Offset></Anchor>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"><Offset><AbsDimension x="-4" y="4"/></Offset></Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+
+			<Layer level="OVERLAY">
+<!--
+				<FontString name="$parent_Title" inherits="GameFontNormal" justifyH="left" text="Zygor's Guides">
+					<Size><AbsDimension x="150" y="0"/></Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT"><Offset><AbsDimension x="4" y="-5"/></Offset></Anchor>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-40" y="-5"/></Offset></Anchor>
+					</Anchors>
+				</FontString>
+-->
+				<FontString name="$parent_SectionTitle" inherits="GameFontNormal" justifyH="left" justifyV="bottom" text="">
+					<Size><AbsDimension x="145" y="20"/></Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT"><Offset><AbsDimension x="7" y="-2"/></Offset></Anchor>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-47" y="-2"/></Offset></Anchor>
+					</Anchors>
+				</FontString>
+<!--
+				<FontString name="$parent_Step" inherits="GameFontNormalSmall" justifyH="left" justifyV="bottom" text=", step: ">
+					<Size><AbsDimension x="0" y="20"/></Size>
+					<Anchors><Anchor point="TOPLEFT" relativeTo="$parent_SectionTitle" relativePoint="TOPRIGHT"/></Anchors>
+				</FontString>
+-->
+				<FontString name="$parent_LevelLabel" inherits="GameFontNormal" justifyH="left" justifyV="bottom" text="Current Level: ">
+					<Size><AbsDimension x="0" y="14"/></Size>
+					<Anchors><Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent_SectionTitle"><Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors>
+				</FontString>
+				<FontString name="$parent_LevelText" inherits="GameFontHighlight" justifyH="left" justifyV="bottom" text="">
+					<Size><AbsDimension x="0" y="14"/></Size>
+					<Anchors><Anchor point="BOTTOMLEFT" relativeTo="$parent_LevelLabel" relativePoint="BOTTOMRIGHT"><Offset><AbsDimension x="4" y="0"/></Offset></Anchor></Anchors>
+				</FontString>
+			
+				<FontString name="$parent_StepLabel" inherits="GameFontNormal" justifyH="left" justifyV="bottom" text="Step: ">
+					<Size><AbsDimension x="0" y="14"/></Size>
+					<Anchors><Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent_SectionTitle"><Offset><AbsDimension x="50" y="-20"/></Offset></Anchor></Anchors>
+				</FontString>
+				<FontString name="$parent_StepText" inherits="GameFontHighlight" justifyH="left" justifyV="bottom" text="">
+					<Size><AbsDimension x="0" y="14"/></Size>
+					<Anchors><Anchor point="BOTTOMLEFT" relativeTo="$parent_StepLabel" relativePoint="BOTTOMRIGHT"><Offset><AbsDimension x="4" y="0"/></Offset></Anchor></Anchors>
+				</FontString>
+			
+				<FontString name="$parent_LocationLabel" inherits="GameFontNormal" justifyH="left" justifyV="bottom" text="Location: ">
+					<Size><AbsDimension x="0" y="14"/></Size>
+					<Anchors><Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent_LevelLabel"><Offset><AbsDimension x="0" y="-20"/></Offset></Anchor></Anchors>
+				</FontString>
+				<FontString name="$parent_LocationText" inherits="GameFontHighlight" justifyH="left" justifyV="bottom" text="">
+					<Size><AbsDimension x="0" y="14"/></Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parent_LocationLabel" relativePoint="BOTTOMRIGHT"><Offset><AbsDimension x="4" y="0"/></Offset></Anchor>
+						<Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT"><Offset><AbsDimension x="-5" y="0" /></Offset></Anchor>
+					</Anchors>
+				</FontString>
+			
+				<Texture name="$parent_Divider">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT"><Offset><AbsDimension x="5" y="-50" /></Offset></Anchor>
+						<Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT"><Offset><AbsDimension x="-5" y="0" /></Offset></Anchor>
+					</Anchors>
+					<Size><AbsDimension x="100" y="1"/></Size>
+					<Color r="1" g="1" b="1" a="0.4" /> 
+				</Texture>
+
+				<FontString name="$parent_Text" inherits="GameFontHighlightSmall" text="" justifyH="left" justifyV="top">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT"><Offset><AbsDimension x="5" y="-55"/></Offset></Anchor>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-6" y="-55"/></Offset></Anchor>
+						<Anchor point="BOTTOM" relativePoint="BOTTOM"><Offset><AbsDimension x="0" y="5"/></Offset></Anchor>
+					</Anchors>
+				</FontString>
+
+				<Texture name="$parent_Divider2">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent_Text" relativePoint="TOPLEFT"><Offset><AbsDimension x="0" y="-5" /></Offset></Anchor>
+						<Anchor point="RIGHT" relativePoint="RIGHT"><Offset><AbsDimension x="-5" y="0" /></Offset></Anchor>
+					</Anchors>
+					<Size><AbsDimension x="100" y="1"/></Size>
+					<Color r="1" g="1" b="1" a="0.4" /> 
+				</Texture>
+
+				<FontString name="$parent_MissingText" inherits="GameFontNormalSmall" text="" justifyH="center" justifyV="top">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT"><Offset><AbsDimension x="5" y="-25"/></Offset></Anchor>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-5" y="-25"/></Offset></Anchor>
+						<Anchor point="BOTTOM" relativePoint="BOTTOM"><Offset><AbsDimension x="0" y="5"/></Offset></Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+
+		</Layers>
+
+	</Frame>  
+
+</Ui>

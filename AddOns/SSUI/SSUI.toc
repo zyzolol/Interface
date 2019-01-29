@@ -1,0 +1,10 @@
+## Interface: 20003
+## Title: SSUI
+## Notes: Configuration UI for SS mods
+## SavedVariables: SSUI_Config
+## LoadOnDemand: 1
+..\..\FrameXML\Fonts.xml
+..\..\FrameXML\OptionsFrameTemplates.xml
+..\..\FrameXML\UIPanelTemplates.xml
+..\..\FrameXML\UIDropDownMenu.xml
+SSUI.xml

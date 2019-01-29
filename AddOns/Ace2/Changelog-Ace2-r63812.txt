@@ -1,0 +1,19 @@
+------------------------------------------------------------------------
+r63812 | rabbit | 2008-03-07 09:06:50 -0500 (Fri, 07 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0: Get a more descriptive message for this new error that we can't track down.
+------------------------------------------------------------------------
+r60961 | ckknight | 2008-02-11 12:52:50 -0500 (Mon, 11 Feb 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - typo do => then
+------------------------------------------------------------------------
+r60958 | ckknight | 2008-02-11 12:50:29 -0500 (Mon, 11 Feb 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - fix issue with trying to do :GetLibraryVersion() on non-AceLibrary, LibStub'd libraries
+------------------------------------------------------------------------

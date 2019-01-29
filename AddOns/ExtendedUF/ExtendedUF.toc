@@ -1,0 +1,18 @@
+## Interface: 20400
+## Title: Extended Unit Frames
+## Notes: Upgrades the Blizzard Unit Frames by important features like focus frame, party targets, party cast bars, class icons, highly modifyable status texts, etc.
+## OptionalDeps: Ace3, LibSharedMedia-3.0
+## SavedVariables: ExtendedUFDB
+
+## Author: stfx
+## Version: $Revision: 101 $
+
+
+embeds.xml
+
+ExtendedPartyFrame.xml
+FocusFrame.xml
+ClassIcons.xml
+
+ExtendedUF.lua
+config.lua

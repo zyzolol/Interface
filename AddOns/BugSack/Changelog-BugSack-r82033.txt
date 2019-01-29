@@ -1,0 +1,10 @@
+------------------------------------------------------------------------
+r82033 | rabbit | 2008-09-25 06:14:50 -0400 (Thu, 25 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/BugSack/BugSack.toc
+   M /trunk/BugSack/BugSackFu.lua
+   M /trunk/BugSack/Libs
+   M /trunk/BugSack/embeds.xml
+
+BugSack: Remove Tablet.
+------------------------------------------------------------------------

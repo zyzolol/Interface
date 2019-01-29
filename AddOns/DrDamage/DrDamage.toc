@@ -1,0 +1,34 @@
+## Interface: 20400
+## Title: DrDamage |cff7fff7f-Ace2-|r
+## Author: Gagorian EU-Al'Akir
+## Notes: In-game theorycraft. Calculates actual damage/healing based on gear, talents and buffs.
+## Notes-zhTW: 遊戲中計算傷害/治療數值的插件，考慮裝備、天賦、增益效果，計算精確的數值。
+## Version: 1.5.0
+## SavedVariables: DrDamageDB
+
+## X-Category: Interface Enhancements
+## OptionalDeps: Ace2, FuBar, FlexBar2, InfiniBar, LibBabble-Inventory-3.0, LibGratuity-3.0, DewdropLib, FuBarPlugin-2.0
+## X-Embeds: Ace2, LibBabble-Inventory-3.0, LibGratuity-3.0, DewdropLib, FuBarPlugin-2.0
+
+embeds.xml
+
+Locales\DrDamage-enUS.lua
+Locales\DrDamage-koKR.lua
+Locales\DrDamage-zhCN.lua
+Locales\DrDamage-zhTW.lua
+
+Caster.lua
+Melee.lua
+
+Aura.lua
+DrDamage.lua
+
+Data\Druid.lua
+Data\Hunter.lua
+Data\Mage.lua
+Data\Paladin.lua
+Data\Priest.lua
+Data\Rogue.lua
+Data\Shaman.lua
+Data\Warlock.lua
+Data\Warrior.lua

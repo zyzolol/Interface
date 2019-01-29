@@ -1,0 +1,118 @@
+------------------------------------------------------------------------
+r77248 | Zarni | 2008-06-22 13:48:10 -0400 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile/Procodile.lua
+
+Procodile: fix silly error
+------------------------------------------------------------------------
+r77222 | Zarni | 2008-06-22 04:10:26 -0400 (Sun, 22 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile
+   M /trunk/Procodile/Procodile.lua
+   M /trunk/Procodile/Procodile.toc
+   M /trunk/Procodile/embeds.xml
+
+Procodile: use LibSink for output
+------------------------------------------------------------------------
+r77016 | scorpio0920 | 2008-06-18 14:34:56 -0400 (Wed, 18 Jun 2008) | 2 lines
+Changed paths:
+   M /trunk/Procodile/Procodile.toc
+   A /trunk/Procodile/locale/zhTW.lua
+
+Procodile:
+- Added zhTW localization.
+------------------------------------------------------------------------
+r76776 | wang | 2008-06-15 21:06:34 -0400 (Sun, 15 Jun 2008) | 3 lines
+Changed paths:
+   M /trunk/Procodile/Procodile.toc
+   M /trunk/Procodile/ProcodileFu.lua
+   M /trunk/Procodile/locale/enUS.lua
+   A /trunk/Procodile/locale/zhCN.lua
+
+Procodile:
+- zhCN added
+- ProcodileFu has been localized
+------------------------------------------------------------------------
+r76734 | nevcairiel | 2008-06-15 07:48:56 -0400 (Sun, 15 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile
+   M /trunk/Procodile/Procodile.toc
+   D /trunk/Procodile/lib
+
+Procodile: remove static LibBars-1.0 copy and point externals to trunk
+------------------------------------------------------------------------
+r76081 | Zarni | 2008-06-05 12:17:06 -0400 (Thu, 05 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile
+   M /trunk/Procodile/Procodile.toc
+   A /trunk/Procodile/lib/LibBars-1.0
+   A /trunk/Procodile/lib/LibBars-1.0/LibBars-1.0.lua
+   A /trunk/Procodile/lib/LibBars-1.0/lib.xml
+
+Procodile: added LibBars statically for now, fixed .toc - thanks Vangual
+------------------------------------------------------------------------
+r76007 | Zarni | 2008-06-04 13:00:53 -0400 (Wed, 04 Jun 2008) | 1 line
+Changed paths:
+   D /trunk/Procodile/croc.blp
+   A /trunk/Procodile/lib
+   D /trunk/Procodile/libs
+
+Procodile: minor cleanup
+------------------------------------------------------------------------
+r75727 | Zarni | 2008-06-01 09:43:00 -0400 (Sun, 01 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile/Procodile.lua
+   M /trunk/Procodile/ProcodileFu.lua
+   M /trunk/Procodile/locale/enUS.lua
+
+Procodile: custom procs, tooltip prettified
+------------------------------------------------------------------------
+r75553 | Zarni | 2008-05-30 12:27:08 -0400 (Fri, 30 May 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile/Procodile.lua
+   M /trunk/Procodile/locale/enUS.lua
+
+Procodile: removed instance only option, addeed watching of a few weapon enchantments
+------------------------------------------------------------------------
+r75543 | Zarni | 2008-05-30 10:06:08 -0400 (Fri, 30 May 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile/Procodile.lua
+   M /trunk/Procodile/locale/enUS.lua
+
+Procodile: customizable cooldown bars
+------------------------------------------------------------------------
+r75471 | Zarni | 2008-05-29 12:39:14 -0400 (Thu, 29 May 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile/Procodile.lua
+   M /trunk/Procodile/ProcodileFu.lua
+
+Procodile: persistant proc statistics, ctrl-click on FuBar on reset instead of just click
+------------------------------------------------------------------------
+r75272 | Zarni | 2008-05-27 14:37:24 -0400 (Tue, 27 May 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile/embeds.xml
+
+Procodile: Fixed embeds.xml
+------------------------------------------------------------------------
+r75271 | Zarni | 2008-05-27 13:31:46 -0400 (Tue, 27 May 2008) | 1 line
+Changed paths:
+   M /trunk/Procodile
+   M /trunk/Procodile/Procodile.lua
+
+Procodile: Added externals
+------------------------------------------------------------------------
+r75269 | Zarni | 2008-05-27 13:09:49 -0400 (Tue, 27 May 2008) | 1 line
+Changed paths:
+   A /trunk/Procodile
+   A /trunk/Procodile/Bindings.xml
+   A /trunk/Procodile/Procodile.lua
+   A /trunk/Procodile/Procodile.toc
+   A /trunk/Procodile/ProcodileFu.lua
+   A /trunk/Procodile/croc.blp
+   A /trunk/Procodile/embeds.xml
+   A /trunk/Procodile/libs
+   A /trunk/Procodile/locale
+   A /trunk/Procodile/locale/enUS.lua
+
+Procodile: Initial commit
+------------------------------------------------------------------------

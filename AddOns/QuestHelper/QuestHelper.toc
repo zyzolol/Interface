@@ -1,0 +1,70 @@
+## Interface: 20400
+## Title: QuestHelper
+## Author: zorbathut, smariot, vipersniper, nesher
+## Notes: Calculates an optimal route for you to follow while questing.
+## Notes-deDE: Berechnet eine optimale Route für dich, der du während dem Questen folgen kannst.
+## Notes-frFR: Calcule un itinéraire optimal pour vous de suivre.
+## Notes-esES: Calcula la mejor ruta a seguir para usted.
+## Notes-esMX: Calcula la mejor ruta a seguir para usted.
+## Notes-koKR: 노선에 대한 계산을 수행합니다.
+## Version: 0.50
+## OptionalDeps: Cartographer, TomTom
+## SavedVariables: QuestHelper_Version QuestHelper_SaveVersion QuestHelper_Locale QuestHelper_Quests QuestHelper_Objectives QuestHelper_FlightInstructors QuestHelper_FlightRoutes QuestHelper_Pref QuestHelper_UID QuestHelper_SaveDate
+## SavedVariablesPerCharacter: QuestHelper_KnownFlightRoutes QuestHelper_Home QuestHelper_CharVersion
+## X-Website: http://wow.curse.com/downloads/details/9924/
+## X-Embeds: Astrolabe, ChatThrottleLib
+
+Astrolabe\Load.xml
+ChatThrottleLib\ChatThrottleLib.xml
+
+static.lua
+changes.lua
+
+lang.lua
+lang_enus.lua
+lang_dede.lua
+lang_frfr.lua
+lang_eses.lua
+lang_esmx.lua
+lang_dadk.lua
+lang_nlnl.lua
+lang_trtr.lua
+lang_ruru.lua
+lang_svse.lua
+lang_itit.lua
+#lang_zhcn.lua
+lang_zhtw.lua
+lang_kokr.lua
+lang_trtr.lua
+lang_huhu.lua
+lang_itit.lua
+lang_ptbr.lua
+lang_ptpt.lua
+
+upgrade.lua
+main.lua
+recycle.lua
+objective.lua
+quest.lua
+questlog.lua
+utility.lua
+dodads.lua
+graph.lua
+teleport.lua
+pathfinding.lua
+routing.lua
+custom.lua
+menu.lua
+hidden.lua
+nag.lua
+comm.lua
+mapbutton.lua
+pattern.lua
+flightpath.lua
+tracker.lua
+objtips.lua
+textviewer.lua
+help.lua
+
+cartographer.lua
+tomtom.lua

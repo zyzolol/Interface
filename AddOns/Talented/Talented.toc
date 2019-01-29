@@ -1,0 +1,43 @@
+## Interface: 20400
+## Title: Talented
+## Name: Talented
+## Notes: The Talent Template Editor
+## Notes-zhCN: Talented 天赋模板编辑器
+## Author: Jerry
+## Version: 1.3
+## OptionalDeps: Ace2, Deformat, DewdropLib, GratuityLib, Prat
+## SavedVariables: TalentedDB
+## SavedVariablesPerCharacter: TalentedCharDB
+## X-AceForum: 3955
+## X-Category: Interface Enhancements
+## LoadManagers: Talented_Loader
+
+embeds.xml
+
+locales.xml
+
+core.lua
+spelldata.lua
+spell.lua
+talents.lua
+encode.lua
+viewmode.lua
+editmode.lua
+learn.lua
+other.lua
+chat.lua
+tips.lua
+apply.lua
+inspectui.lua
+wowhead.lua
+wowdb.lua
+
+ui\pool.lua
+ui\base.lua
+ui\trees.lua
+ui\buttons.lua
+ui\branches.lua
+ui\arrows.lua
+ui\lines.lua
+
+matrix.lua

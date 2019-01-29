@@ -1,0 +1,29 @@
+## Title: Informant
+## Notes: Displays detailed item information in tooltips, and can produce item reports by binding an information window to a keypress [5.0.0] This AddOn is licenced under the GNU GPL, see GPL.txt for details.
+##
+## Interface: 20400
+## LoadOnDemand: 1
+## Dependencies: EnhTooltip, Stubby
+## OptionalDeps: !nLog, Babylonian, DebugLib, Configator, SlideBar
+## SavedVariables: InformantConfig, InformantLocalUpdates
+##
+## Version: 5.0.0 (BillyGoat)
+## Revision: $Id: Informant.toc 3502 2008-09-17 18:03:11Z root $
+## URL: http://auctioneeraddon.com/dl/Informant
+InfManifest.lua
+
+Libs\Load.xml
+
+InfStrings.lua
+InfLocale.lua
+
+InfMain.lua
+
+Data\InfQuests.lua
+
+InfCommand.lua
+InfSettings.lua
+InfTooltip.lua
+InfData.lua
+
+Informant.xml

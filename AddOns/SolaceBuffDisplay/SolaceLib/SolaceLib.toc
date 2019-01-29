@@ -1,0 +1,8 @@
+## Interface: 20430
+## Title: Lib: SolaceLib
+## Notes: Common functions for Solace mods.
+## Version: 2.4.0
+## Author: Hallithron
+## SavedVariablesPerCharacter: SPB_Options
+
+SolaceLib.lua

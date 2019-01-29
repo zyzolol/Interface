@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/938/trunk/Afflicted/libs/AceGUI-3.0/widgets
+END
+AceGUIWidget-SimpleGroup.lua
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-SimpleGroup.lua
+END
+AceGUIWidget-DropDownGroup.lua
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/803/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-DropDownGroup.lua
+END
+AceGUIWidget-ScrollFrame.lua
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-ScrollFrame.lua
+END
+AceGUIWidget-DropDown-Items.lua
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/803/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-DropDown-Items.lua
+END
+AceGUIWidget-Button.lua
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-Button.lua
+END
+AceGUIWidget-TreeGroup.lua
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/938/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-TreeGroup.lua
+END
+AceGUIWidget-ColorPicker.lua
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-ColorPicker.lua
+END
+AceGUIWidget-Label.lua
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-Label.lua
+END
+AceGUIWidget-MultiLineEditBox.lua
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-MultiLineEditBox.lua
+END
+AceGUIWidget-Slider.lua
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-Slider.lua
+END
+AceGUIWidget-Keybinding.lua
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-Keybinding.lua
+END
+AceGUIWidget-TabGroup.lua
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/938/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-TabGroup.lua
+END
+AceGUIWidget-CheckBox.lua
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-CheckBox.lua
+END
+AceGUIWidget-Icon.lua
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-Icon.lua
+END
+AceGUIWidget-BlizOptionsGroup.lua
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-BlizOptionsGroup.lua
+END
+AceGUIWidget-Frame.lua
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-Frame.lua
+END
+AceGUIWidget-InlineGroup.lua
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-InlineGroup.lua
+END
+AceGUIWidget-DropDown.lua
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/938/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-DropDown.lua
+END
+AceGUIWidget-EditBox.lua
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-EditBox.lua
+END
+AceGUIWidget-Heading.lua
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/734/trunk/Afflicted/libs/AceGUI-3.0/widgets/AceGUIWidget-Heading.lua
+END

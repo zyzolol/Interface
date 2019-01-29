@@ -1,0 +1,29 @@
+﻿## Interface: 20400
+## Author: hshh
+## Name: RangeRecolor
+## Title: RangeRecolor |cff7fff7f -Ace2-|r
+## Notes: Recolors action bar buttons when out of range
+## Notes-zhCN: 当目标超出有效范围时将动作条按钮设定为特别的颜色
+## Notes-zhTW: 當目標超出有效範圍時將動作條按鈕設定為紅色
+## Version: 2.1
+## X-eMail: hshh@hshh.org
+## X-Website: http://www.hshh.org/
+## X-Category: Interface Enhancements
+## SavedVariables: RangeRecolorOptions
+## OptionalDeps: Ace2
+
+libs\AceLibrary\AceLibrary.lua
+libs\AceOO-2.0\AceOO-2.0.lua
+libs\AceEvent-2.0\AceEvent-2.0.lua
+libs\AceAddon-2.0\AceAddon-2.0.lua
+libs\AceDB-2.0\AceDB-2.0.lua
+libs\AceHook-2.1\AceHook-2.1.lua
+libs\AceLocale-2.2\AceLocale-2.2.lua
+libs\AceConsole-2.0\AceConsole-2.0.lua
+
+Locale.lua
+Locale.zhtw.lua
+Locale.zhcn.lua
+Locale.koKR.lua
+Locale.frFR.lua
+RangeRecolor.lua

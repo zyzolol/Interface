@@ -1,0 +1,8 @@
+<Bindings>
+	-- Dummy buttons
+	<Binding name="SSETARFLAG" header="SSWSG">
+	</Binding>
+
+	<Binding name="SSFTARFLAG">
+	</Binding>
+</Bindings>

@@ -1,0 +1,9 @@
+## Interface: 20400
+## Title: SaySapped
+## Version: 2008-12-19
+## Notes: Dla Koperflicia od Huggarna 
+## Author: Bitbyte of Icecrown
+## X-eMail: saysapped at orgplay dot com
+## X-Category: Chat/Communication
+
+SaySapped.lua

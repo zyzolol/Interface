@@ -1,0 +1,49 @@
+﻿## Interface: 20400
+## Title: Automaton
+## Notes: Reduces interface tedium by doing the little things for you.
+## Notes-zhCN: 自动帮你完成一些界面上的操作。
+## Notes-zhTW: 為您減少些介面的沉悶.
+## Notes-esES: Reduce el tedio de la interfaz haciendo pequenyas cosas por ti
+## Author: weab
+## Version: 1.3.0
+
+## X-Category: Interface Enhancements
+## X-Credits: gxam (co-author), sayclub (koKR translations)
+## X-RelSite-WoWI: 5610
+## X-AceForum: 2887
+
+## OptionalDeps: Ace2, AbacusLib, DewdropLib, FuBarPlugin-2.0
+## SavedVariables: AutomatonDB
+
+## X-Embeds: Ace2, AbacusLib, DewdropLib, FuBarPlugin-2.0
+embeds.xml
+
+Core.lua
+modules\Ding.lua
+modules\Dismount.lua
+modules\Filter.lua
+modules\Flight.lua
+modules\Gossip\Locale-enUS.lua
+modules\Gossip\Locale-deDE.lua
+modules\Gossip\Locale-frFR.lua
+modules\Gossip\Locale-koKR.lua
+modules\Gossip\Locale-esES.lua
+modules\Gossip\Locale-zhCN.lua
+modules\Gossip\Locale-zhTW.lua
+modules\Gossip\Gossip.lua
+modules\Gossip\GossipData.lua
+modules\Group.lua
+modules\Loner.lua
+modules\LootBOP.lua
+modules\Mailer.lua
+modules\Plates.lua
+modules\Queue.lua
+modules\Release.lua
+modules\Repair.lua
+modules\Rez.lua
+modules\Sell.lua
+modules\Stand.lua
+modules\Summon.lua
+modules\Unshapeshift.lua
+#modules\Whine.lua
+modules\Wuss.lua

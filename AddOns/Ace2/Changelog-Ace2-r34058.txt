@@ -1,0 +1,391 @@
+------------------------------------------------------------------------
+r34058 | ckknight | 2007-04-29 04:53:32 -0400 (Sun, 29 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceModuleCore-2.0/AceModuleCore-2.0.lua
+
+.AceModuleCore-2.0 - when a module is enabled/disabled, call :OnModuleEnable or :OnModuleDisable on the core.
+------------------------------------------------------------------------
+r33999 | ckknight | 2007-04-28 17:22:16 -0400 (Sat, 28 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - change all (ANSI) degree symbols to \176 and all (ANSI) plus/minus symbols to \177. This should relieve issues with foreigners.
+------------------------------------------------------------------------
+r33952 | rabbit | 2007-04-28 02:07:16 -0400 (Sat, 28 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+
+.AceConsole-2.0: Fix printUsage for type=text+validate=table and type=range, and possibly type=text with multiToggle.
+------------------------------------------------------------------------
+r33950 | ckknight | 2007-04-28 01:41:36 -0400 (Sat, 28 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+
+.AceConsole-2.0 - fix typo
+------------------------------------------------------------------------
+r33949 | ckknight | 2007-04-28 01:30:59 -0400 (Sat, 28 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceModuleCore-2.0/AceModuleCore-2.0.lua
+
+.AceModuleCore-2.0 - can now nest calls to :IterateModules()
+------------------------------------------------------------------------
+r33947 | rabbit | 2007-04-28 01:22:04 -0400 (Sat, 28 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceModuleCore-2.0/AceModuleCore-2.0.lua
+
+.AceModuleCore-2.0: Currently, you can't nest calls to :IterateModules without unforeseen and bad consequences, so now we error if you do. Hopefully this'll be fixed soonish, though.
+------------------------------------------------------------------------
+r33916 | ckknight | 2007-04-27 14:52:19 -0400 (Fri, 27 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/Ace2.toc
+
+Ace2 - remove space.
+------------------------------------------------------------------------
+r33861 | ckknight | 2007-04-26 23:02:04 -0400 (Thu, 26 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - apparently this was creating a bunch of extra tables needlessly. Now uses a recycling mechanism.
+------------------------------------------------------------------------
+r33858 | ckknight | 2007-04-26 22:21:29 -0400 (Thu, 26 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - potential bugfixings.
+------------------------------------------------------------------------
+r33852 | ckknight | 2007-04-26 20:53:06 -0400 (Thu, 26 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - make sure to register with all events
+------------------------------------------------------------------------
+r33851 | ckknight | 2007-04-26 20:50:05 -0400 (Thu, 26 Apr 2007) | 2 lines
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - properly revert to before the breakage started occurring.
+- note: in WoW 2.1, still use the new version
+------------------------------------------------------------------------
+r33844 | ckknight | 2007-04-26 19:15:42 -0400 (Thu, 26 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - for bucket events that handle units, i.e. events that start with UNIT_, before firing off the final event, make sure that all the units inside the bucket exist.
+------------------------------------------------------------------------
+r33771 | rabbit | 2007-04-25 22:14:51 -0400 (Wed, 25 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/Ace2.toc
+
+Ace2: Remove AceDebug-2.1 from the TOC.
+------------------------------------------------------------------------
+r33602 | ckknight | 2007-04-24 05:15:53 -0400 (Tue, 24 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceDebug-2.0/AceDebug-2.0.lua
+
+.AceDebug-2.0 - apparently DEBUGGING and TOGGLE_DEBUGGING were global
+------------------------------------------------------------------------
+r33601 | ckknight | 2007-04-24 05:13:12 -0400 (Tue, 24 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - remove SETGLOBAL msg and message.
+------------------------------------------------------------------------
+r33597 | ckknight | 2007-04-24 04:47:06 -0400 (Tue, 24 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - turned upgrade error into a message, also checks by revision.
+------------------------------------------------------------------------
+r33494 | ckknight | 2007-04-23 07:30:44 -0400 (Mon, 23 Apr 2007) | 2 lines
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - now holds the old version (WoW 2.0) and the new version (WoW 2.1), loading each in the respective patches. Hopefully this doesn't fuck everything to hell.
+
+------------------------------------------------------------------------
+r33493 | ckknight | 2007-04-23 07:26:32 -0400 (Mon, 23 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - due to a destructive upgrade bug, prevent old versions from upgrading, preliminarily.
+------------------------------------------------------------------------
+r33368 | ckknight | 2007-04-22 00:04:28 -0400 (Sun, 22 Apr 2007) | 3 lines
+Changed paths:
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+
+.AceConsole-2.0 - should fix most of the issues with passing values.
+- allow for subgroups of passing groups.
+- options with .get and .set won't be passing options
+------------------------------------------------------------------------
+r33362 | ckknight | 2007-04-21 21:37:08 -0400 (Sat, 21 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceDB-2.0/AceDB-2.0.lua
+
+.AceDB-2.0 - make the char db only create if .charName is set
+------------------------------------------------------------------------
+r33361 | ckknight | 2007-04-21 21:34:03 -0400 (Sat, 21 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceDB-2.0/AceDB-2.0.lua
+
+.AceDB-2.0 - potentially fix bug where the char database is nil
+------------------------------------------------------------------------
+r33238 | ckknight | 2007-04-20 20:15:54 -0400 (Fri, 20 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - be sure to make frames and register events for addons in the registry.
+------------------------------------------------------------------------
+r33221 | ckknight | 2007-04-20 18:41:49 -0400 (Fri, 20 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - cleaned up the hack to actually work.
+------------------------------------------------------------------------
+r33218 | ckknight | 2007-04-20 18:25:54 -0400 (Fri, 20 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - through a series of hacks, should fix upgrade bugs.
+------------------------------------------------------------------------
+r33162 | ckknight | 2007-04-20 04:51:20 -0400 (Fri, 20 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - typo
+------------------------------------------------------------------------
+r33150 | ckknight | 2007-04-20 00:19:00 -0400 (Fri, 20 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - added assert
+------------------------------------------------------------------------
+r33149 | ckknight | 2007-04-20 00:17:18 -0400 (Fri, 20 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceLibrary/AceLibrary.lua
+
+.AceLibrary - go back to normal argCheck thing.
+------------------------------------------------------------------------
+r33148 | ckknight | 2007-04-20 00:08:00 -0400 (Fri, 20 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - comment out debug line
+------------------------------------------------------------------------
+r33147 | ckknight | 2007-04-20 00:04:30 -0400 (Fri, 20 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceAddon-2.0/AceAddon-2.0.toc
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.toc
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.toc
+   M /trunk/Ace2/AceDB-2.0/AceDB-2.0.toc
+   M /trunk/Ace2/AceDebug-2.0/AceDebug-2.0.toc
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.toc
+   M /trunk/Ace2/AceHook-2.1/AceHook-2.1.toc
+   M /trunk/Ace2/AceLibrary/AceLibrary.lua
+   M /trunk/Ace2/AceLibrary/AceLibrary.toc
+   M /trunk/Ace2/AceLocale-2.2/AceLocale-2.2.toc
+   M /trunk/Ace2/AceModuleCore-2.0/AceModuleCore-2.0.toc
+   M /trunk/Ace2/AceOO-2.0/AceOO-2.0.toc
+   M /trunk/Ace2/AceTab-2.0/AceTab-2.0.toc
+
+Ace2 - add LoadOnDemand: 1 to subfolder tocs
+------------------------------------------------------------------------
+r33145 | ckknight | 2007-04-19 23:59:48 -0400 (Thu, 19 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - typo
+------------------------------------------------------------------------
+r33144 | ckknight | 2007-04-19 23:59:27 -0400 (Thu, 19 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - more schedule fixes
+------------------------------------------------------------------------
+r33143 | ckknight | 2007-04-19 23:11:53 -0400 (Thu, 19 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - better handling of schedules
+------------------------------------------------------------------------
+r33138 | ckknight | 2007-04-19 22:41:58 -0400 (Thu, 19 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - remove old debug message
+------------------------------------------------------------------------
+r33137 | ckknight | 2007-04-19 22:32:38 -0400 (Thu, 19 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceLibrary/AceLibrary.lua
+
+.AceLibrary - small optimization to argCheck
+------------------------------------------------------------------------
+r33131 | ckknight | 2007-04-19 22:02:02 -0400 (Thu, 19 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/Ace2.toc
+
+Ace2 - add AceOO back into toc (whoops)
+------------------------------------------------------------------------
+r33129 | ckknight | 2007-04-19 21:47:45 -0400 (Thu, 19 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceLibrary/AceLibrary.lua
+
+.AceLibrary - optimizations (mostly thanks to vhaarr)
+------------------------------------------------------------------------
+r33128 | rabbit | 2007-04-19 21:45:34 -0400 (Thu, 19 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceModuleCore-2.0/AceModuleCore-2.0.lua
+
+.AceModuleCore-2.0: Optimization for common paths in :IsModule(...).
+------------------------------------------------------------------------
+r33124 | ckknight | 2007-04-19 21:17:39 -0400 (Thu, 19 Apr 2007) | 2 lines
+Changed paths:
+   M /trunk/Ace2/Ace2.toc
+   A /trunk/Ace2/AceAddon-2.0/AceAddon-2.0.toc
+   A /trunk/Ace2/AceComm-2.0/AceComm-2.0.toc
+   A /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.toc
+   A /trunk/Ace2/AceDB-2.0/AceDB-2.0.toc
+   A /trunk/Ace2/AceDebug-2.0/AceDebug-2.0.toc
+   A /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.toc
+   A /trunk/Ace2/AceHook-2.1/AceHook-2.1.toc
+   A /trunk/Ace2/AceLibrary/AceLibrary.toc
+   A /trunk/Ace2/AceLocale-2.2/AceLocale-2.2.toc
+   A /trunk/Ace2/AceModuleCore-2.0/AceModuleCore-2.0.toc
+   A /trunk/Ace2/AceOO-2.0/AceOO-2.0.toc
+   A /trunk/Ace2/AceTab-2.0/AceTab-2.0.toc
+
+Ace2 - added TOC files to the library folders, so that they can be taken out and used as independent addons, which should make profiling much easier.
+
+------------------------------------------------------------------------
+r33121 | ckknight | 2007-04-19 20:47:30 -0400 (Thu, 19 Apr 2007) | 4 lines
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - instead of having one frame for all addons, make one frame per addon and register with those.  This will allow for profiling to be much more accurate for addons.
+Internals drastically changed for this change.
+Assorted optimizations.
+Hopefully nothing breaks, I did a bunch of testing, so here's hoping.
+------------------------------------------------------------------------
+r32597 | ckknight | 2007-04-14 03:51:38 -0400 (Sat, 14 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - update ChatThrottleLib to v16
+------------------------------------------------------------------------
+r32527 | ckknight | 2007-04-13 05:06:42 -0400 (Fri, 13 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0 - use IsLoggedIn() in WoW 2.1
+------------------------------------------------------------------------
+r32522 | ckknight | 2007-04-13 03:21:21 -0400 (Fri, 13 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - If WoW 2.1 is detected, send whispers through the addon stream instead of the standard whisper stream.
+------------------------------------------------------------------------
+r32117 | ckknight | 2007-04-08 18:02:27 -0400 (Sun, 08 Apr 2007) | 2 lines
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - updated ChatThrottleLib to v15.
+- Note: doesn't send whispers through the addon stream, as I have no real way of testing it till the PTR.
+------------------------------------------------------------------------
+r32030 | ckknight | 2007-04-07 03:51:19 -0400 (Sat, 07 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - allow ZONE to be unregistered
+------------------------------------------------------------------------
+r32016 | ckknight | 2007-04-06 20:54:43 -0400 (Fri, 06 Apr 2007) | 2 lines
+Changed paths:
+   M /trunk/Ace2/Ace2.toc
+
+Ace2 - remove colors from toc title. There's no need
+
+------------------------------------------------------------------------
+r32015 | ckknight | 2007-04-06 20:53:20 -0400 (Fri, 06 Apr 2007) | 3 lines
+Changed paths:
+   M /trunk/AbacusLib/AbacusLib.toc
+   M /trunk/Ace2/Ace2.toc
+   M /trunk/AnchorsAway/AnchorsAway.toc
+   M /trunk/Babble-2.2/Babble-2.2.toc
+   M /trunk/BanzaiLib/BanzaiLib.toc
+   M /trunk/CandyBar/CandyBar.toc
+   M /trunk/CompostLib/CompostLib.toc
+   M /trunk/CrayonLib/CrayonLib.toc
+   M /trunk/Deformat/Deformat.toc
+   M /trunk/DewdropLib/DewdropLib.toc
+   M /trunk/FuBarPlugin-2.0/FuBarPlugin-2.0.toc
+   M /trunk/GloryLib/GloryLib.toc
+   M /trunk/GratuityLib/GratuityLib.toc
+   M /trunk/ItemBonusLib/ItemBonusLib.toc
+   M /trunk/JostleLib/JostleLib.toc
+   M /trunk/Metrognome/Metrognome.toc
+   M /trunk/OneStorage/OneStorage.toc
+   M /trunk/PaintChipsLib/PaintChipsLib.toc
+   M /trunk/Parser-3.0/Parser-3.0.toc
+   M /trunk/ParserLib/ParserLib.toc
+   M /trunk/PeriodicTable/PeriodicTable.toc
+   M /trunk/PeriodicTable-2.0/PeriodicTable-2.0.toc
+   M /trunk/PeriodicTable-3.0/PeriodicTable-3.0.toc
+   M /trunk/ProximityLib/ProximityLib.toc
+   M /trunk/Quixote/Quixote.toc
+   M /trunk/RollCall-1.0/RollCall-1.0.toc
+   M /trunk/RosterLib/RosterLib.toc
+   M /trunk/SharedMediaLib/SharedMediaLib.toc
+   M /trunk/SpecialEventsEmbed/SpecialEventsEmbed.toc
+   M /trunk/SpellEventsLib/SpellEventsLib.toc
+   M /trunk/Stitch-1.1/Stitch-1.1.toc
+   M /trunk/SurfaceLib/SurfaceLib.toc
+   M /trunk/TableTopLib/TableTopLib.toc
+   M /trunk/TabletLib/TabletLib.toc
+   M /trunk/Talismonger-3.0/Talismonger-3.0.toc
+   M /trunk/TipLib/TipLib.toc
+   M /trunk/TouristLib/TouristLib.toc
+   M /trunk/Waterfall-1.0/Waterfall-1.0.toc
+   M /trunk/uiQuery/uiQuery.toc
+
+.Updated all libraries in !!!StandaloneLibraries to start their title with "Lib:" This should make dealing with Blizzard's addon enabler thingy much easier. At least for me.
+Hopefully nothing breaks. *thumbs up*
+
+------------------------------------------------------------------------
+r31981 | rabbit | 2007-04-06 08:52:34 -0400 (Fri, 06 Apr 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceAddon-2.0/AceAddon-2.0.lua
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+   M /trunk/Ace2/AceDB-2.0/AceDB-2.0.lua
+   M /trunk/Ace2/AceDebug-2.0/AceDebug-2.0.lua
+
+Ace2: zhTW update from helium_wong.
+------------------------------------------------------------------------
+r31381 | rabbit | 2007-03-30 08:13:15 -0400 (Fri, 30 Mar 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/Ace2.toc
+
+Ace2: ChatThrottleLib optdep.
+------------------------------------------------------------------------
+r31378 | ckknight | 2007-03-30 08:00:54 -0400 (Fri, 30 Mar 2007) | 7 lines
+Changed paths:
+   M /trunk/Ace2/AceDB-2.0/AceDB-2.0.lua
+
+.AceDB-2.0 - added a special key ['**'], which should always be a table. Like ['*'], it acts a filler for all values, except that unlike ['*'], it will permeate through its siblings.
+e.g.
+{
+['**'] = { alpha = true, bravo = true, charlie = true },
+monkey = { bravo = false }
+}
+monkey will have alpha = true and charlie = true as well.
+------------------------------------------------------------------------
+r31349 | rabbit | 2007-03-30 05:09:57 -0400 (Fri, 30 Mar 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+
+.AceConsole-2.0: .passValue is now passed to disable and hidden.
+------------------------------------------------------------------------
+r31311 | ckknight | 2007-03-29 20:59:50 -0400 (Thu, 29 Mar 2007) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+
+.AceConsole-2.0 - add .passValue support. probably.
+------------------------------------------------------------------------

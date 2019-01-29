@@ -1,0 +1,7 @@
+## Interface: 20300
+## Title: LightHeaded_NPC_Data
+## Notes: Contains NPC coordinates from http://www.wowhead.com.
+## RequiredDeps: LightHeaded
+## LoadOnDemand: 1
+
+..\LightHeaded\Data\LH_NPCData.lua

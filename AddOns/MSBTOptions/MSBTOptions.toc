@@ -1,0 +1,16 @@
+## Interface: 20400
+## Title: MSBT [|cffffff80Options|r]
+## Author: Mik
+## Notes: Load on demand options for Mik's Scrolling Battle Text
+## Dependencies: MikScrollingBattleText
+## LoadOnDemand: 1
+Localization\localization.lua
+Localization\localization.de.lua
+Localization\localization.fr.lua
+Localization\localization.zhcn.lua
+Localization\localization.zhtw.lua
+Localization\localization.ru.lua
+MSBTOptionsControls.lua
+MSBTOptionsPopups.lua
+MSBTOptionsMain.lua
+MSBTOptionsTabs.lua

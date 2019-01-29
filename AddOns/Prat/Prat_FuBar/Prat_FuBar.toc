@@ -1,0 +1,17 @@
+﻿## Interface: 20400
+## Title: Prat |r[|cffeda55fFuBar|r]
+## RequiredDeps: Prat
+## Author: Prat Development Team
+## X-License: GPLv2
+
+## OptionalDeps: Ace2, FuBar
+
+## X-FuBar-Dependent: 1
+## LoadOnDemand: 1
+
+## DefaultState: enabled
+
+## X-Embeds: FuBarPlugin-2.0, DewdropLib, TabletLib
+
+
+includes.xml

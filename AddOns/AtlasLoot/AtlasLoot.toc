@@ -1,0 +1,42 @@
+﻿## Interface: 20400
+## Title: AtlasLoot Corecraft |cFFFF8080(2.0.3)|r
+## Notes: AtlasLoot for Corecraft (2.0.3. Content)
+## Author: Protcow
+## Version: 1.0.0
+## X-eMail:
+## X-Credits: Daviesh (Original AtlasLoot Creator)
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.youtube.com/Protcow
+## X-Embeds: Ace2, DewdropLib, FuBarPlugin-2.0, TabletLib, LibBabble-Boss-3.0, LibBabble-Class-3.0, LibBabble-Faction-3.0, LibBabble-Inventory-3.0, LibBabble-Zone-3.0
+## Title-deDE: AtlasLoot Corecraft |cFFFF8080(2.0.3)|r
+## Notes-deDE: AtlasLoot for Corecraft (2.0.3. Content)
+## Title-frFR: AtlasLoot Corecraft |cFFFF8080(2.0.3)|r
+## Notes-frFR: AtlasLoot for Corecraft (2.0.3. Content)
+## Title-esES: AtlasLoot Corecraft |cFFFF8080(2.0.3)|r
+## Notes-esES: AtlasLoot for Corecraft (2.0.3. Content)
+## Title-koKR: AtlasLoot Corecraft |cFFFF8080(2.0.3)|r
+## Notes-koKR: AtlasLoot for Corecraft (2.0.3. Content)
+## Title-zhCN: AtlasLoot Corecraft |cFFFF8080(2.0.3)|r
+## Notes-zhCN: AtlasLoot for Corecraft (2.0.3. Content)
+## Title-zhTW: AtlasLoot Corecraft |cFFFF8080(2.0.3)|r
+## Notes-zhTW: AtlasLoot for Corecraft (2.0.3. Content)
+## RealTitle-zhCN: AtlasLoot Corecraft |cFFFF8080(2.0.3)|r
+## RealTitle-zhTW: AtlasLoot for Corecraft (2.0.3. Content)
+## Title-ruRU: AtlasLoot Corecraft |cFFFF8080(2.0.3)|r
+## Notes-ruRU: AtlasLoot for Corecraft (2.0.3. Content)
+## SavedVariables: AtlasLootOptions, AtlasLootFuDB, AtlasLootDB
+## SavedVariablesPerCharacter: AtlasLootCharDB
+## OptionalDeps: Alphamap, AtlasLoader, LootLink, ItemSync, FuBar, TabletLib, DewdropLib, FuBarPlugin-2.0, FuBar, Ace2, EquipCompare, LibBabble-Boss-3.0, LibBabble-Class-3.0, LibBabble-Faction-3.0, LibBabble-Inventory-3.0, LibBabble-Zone-3.0
+
+embeds.xml
+
+Constants\Constants.xml
+Bossnames\BossNames.xml
+TableRegister\TableRegister.xml
+PvP\PvP.xml
+Instances\Instances.xml
+Add_Ons\Addons.xml
+WorldBosses\WorldBosses.xml
+Core\AtlasLoot.xml
+DefaultFrame\AtlaslootDefaultFrame.xml

@@ -1,0 +1,72 @@
+------------------------------------------------------------------------
+r74405 | SinusPi | 2008-05-19 07:16:32 -0400 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Waypoints/Waypoints.lua
+
+Cartographer_Waypoints: fixed a case when Cartographer:GetCurrentPlayerPosition returning nils resulted in immediate removal of waypoints (esp. at login time)
+------------------------------------------------------------------------
+r74404 | SinusPi | 2008-05-19 07:10:45 -0400 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer.lua
+
+Cartographer: fixed a case in which GetCurrentPlayerPosition keeps returning nils after once receiving nils from Tourist:TransposeZoneCoordinate.
+------------------------------------------------------------------------
+r73088 | StiviS | 2008-05-08 07:48:10 -0400 (Thu, 08 May 2008) | 2 lines
+Changed paths:
+   M /trunk/Cartographer/Cartographer.lua
+   M /trunk/Cartographer/Cartographer_Coordinates/Coordinates.lua
+   M /trunk/Cartographer/Cartographer_Foglight/Foglight.lua
+   M /trunk/Cartographer/Cartographer_POI/POI.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/Cartographer_Waypoints.toc
+   M /trunk/Cartographer/Cartographer_Waypoints/CorpsePoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/GuildPoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/NotePoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/PartyPoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/Waypoints.lua
+   M /trunk/Cartographer/Cartographer_ZoneInfo/ZoneInfo.lua
+
+Cartographer: 
+- esES updated
+------------------------------------------------------------------------
+r72981 | StiviS | 2008-05-07 12:01:40 -0400 (Wed, 07 May 2008) | 2 lines
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Professions/Professions.lua
+
+Cartographer:
+- Professions: esES updated
+------------------------------------------------------------------------
+r70829 | durcyn | 2008-04-22 00:03:09 -0400 (Tue, 22 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/embeds.xml
+   M /trunk/Cartographer/libs
+
+Cartographer: LibGuildPositions requires CallbackHandler.  unf.
+------------------------------------------------------------------------
+r70534 | xinhuan | 2008-04-19 19:46:38 -0400 (Sat, 19 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/libs
+
+Cartographer: Add LibGuildPositions-1.0 to externals.
+------------------------------------------------------------------------
+r70505 | ckknight | 2008-04-19 15:13:50 -0400 (Sat, 19 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_GuildPositions/Cartographer_GuildPositions.toc
+
+Cartographer_GuildPositions - add LibGuildPositions-1.0 to optionaldeps
+------------------------------------------------------------------------
+r70458 | next96 | 2008-04-19 10:09:25 -0400 (Sat, 19 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Cartographer/embeds.xml
+
+Cartographer: 
+LibGuildPositions-1.0 instead of LibGuildPositions-3.0
+------------------------------------------------------------------------
+r70419 | ckknight | 2008-04-19 03:49:25 -0400 (Sat, 19 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer.lua
+   M /trunk/Cartographer/Cartographer.toc
+   M /trunk/Cartographer/Cartographer_GuildPositions/GuildPositions.lua
+   M /trunk/Cartographer/embeds.xml
+
+Cartographer - add support for LibGuildPositions-1.0. Sending positions along the old comm will stop in one month. Sending requests along the old comm will stop in two months, essentially ceasing the old comm prefix from use.
+------------------------------------------------------------------------

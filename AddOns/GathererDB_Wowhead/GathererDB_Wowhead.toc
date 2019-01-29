@@ -1,0 +1,16 @@
+## Interface: 30000
+## 
+## Title: GathererDB: |cffce0a11Wowhead|r
+## Notes: Gatherer preloaded database, courtesy of |cffce0a11http://wowhead.com|r
+## Version: 1.0.2008-11-07
+##
+## X-Website: http://www.gathereraddon.com
+## X-CompatibleLocales: enUS, enGB, deDE, frFR, koKR, zhCN, zhTW, esES
+## X-Category: Tradeskill
+## X-Date: 2008-02-07
+##
+## RequiredDeps: Gatherer
+
+DB_WowheadMain.lua
+DB_WowheadData.lua
+

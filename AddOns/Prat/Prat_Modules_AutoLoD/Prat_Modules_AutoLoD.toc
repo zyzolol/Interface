@@ -1,0 +1,15 @@
+﻿## Interface: 20400
+## Title: Prat |r[|cffeda55fModules LoD Helper|r]
+## RequiredDeps: Prat, Prat_Modules, Prat_AutoLoD
+## Author: Prat Development Team
+## X-License: GPLv2
+
+## LoadOnDemand: 1
+## DefaultState: enabled
+
+
+includes.xml
+
+
+
+

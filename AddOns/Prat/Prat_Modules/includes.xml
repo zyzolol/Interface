@@ -1,0 +1,43 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+<Include file="frames\popup.xml"/>
+<Include file="frames\pratcc.xml"/>
+
+<Script file="extras\Presets.lua"/>
+
+<Script file="modules\AddonMessages.lua"/>
+<Script file="modules\Alias.lua"/>
+<Script file="modules\AltNames.lua"/>
+<Script file="modules\ChannelColorMemory.lua"/>
+<Script file="modules\ChannelNames.lua"/>
+<Script file="modules\ChannelReordering.lua"/>
+<Script file="modules\ChannelSticky.lua"/>
+<Script file="modules\ChatButtons.lua"/>
+<Script file="modules\ChatFrames.lua"/>
+<Script file="modules\ChatLangButton.lua"/>
+<Script file="modules\ChatLink.lua"/>
+<Script file="modules\ChatLog.lua"/>
+<Script file="modules\ChatTabs.lua"/>
+<Script file="modules\Clear.lua"/>
+<Script file="modules\CopyChat.lua"/>
+<Script file="modules\CustomFilters.lua"/>
+<Script file="modules\Editbox.lua"/>
+<Script file="modules\EventNames.lua"/>
+<Script file="modules\Fading.lua"/>
+<Script file="modules\Filtering.lua"/>
+<Script file="modules\Font.lua"/>
+<Script file="modules\History.lua"/>
+<Script file="modules\Keybindings.lua"/>
+<Script file="modules\Paragraph.lua"/>
+<Script file="modules\PlayerNames.lua"/>
+<Script file="modules\PopupMessage.lua"/>
+<Script file="modules\Scroll.lua"/>
+<Script file="modules\ServerNames.lua"/>
+<Script file="modules\Sounds.lua"/>
+<Script file="modules\Substitutions.lua"/>
+<Script file="modules\TellTarget.lua"/>
+<Script file="modules\Timestamps.lua"/>
+<Script file="modules\UrlCopy.lua"/>
+
+</Ui>

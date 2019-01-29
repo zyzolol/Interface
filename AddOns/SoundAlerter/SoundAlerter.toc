@@ -1,0 +1,14 @@
+﻿## Interface: 20400
+## Title: SoundAlerter
+## Notes: PVP Spell Sound Alert
+## Author: Trolollolol, Abatorlos(of Spinebreaker), DuskAshes, superk521, Schaka
+## SavedVariables: SoundAlerterDB
+## Version: v1.0
+
+embeds.xml
+Locales\locales.xml
+
+SoundAlerter.lua
+defaults.lua
+spelllist.lua
+sponsors.lua

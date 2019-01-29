@@ -1,0 +1,58 @@
+------------------------------------------------------------------------
+r80514 | funkydude | 2008-08-15 21:18:01 -0400 (Fri, 15 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/BadBoy/BadBoy.lua
+
+BadBoy: Blacklist update
+------------------------------------------------------------------------
+r79831 | funkydude | 2008-08-05 18:43:29 -0400 (Tue, 05 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/BadBoy/BadBoy.lua
+   M /trunk/BadBoy/BadBoy.toc
+
+BadBoy: tweak
+------------------------------------------------------------------------
+r79776 | funkydude | 2008-08-04 12:59:58 -0400 (Mon, 04 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/BadBoy/BadBoy.lua
+
+BadBoy: Updated blacklist
+------------------------------------------------------------------------
+r79570 | funkydude | 2008-07-31 11:23:33 -0400 (Thu, 31 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/BadBoy/BadBoy.lua
+
+BadBoy: tweak
+------------------------------------------------------------------------
+r79157 | funkydude | 2008-07-25 22:27:38 -0400 (Fri, 25 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/BadBoy/BadBoy.lua
+   M /trunk/BadBoy/BadBoy.toc
+
+BadBoy: Updated filterset
+------------------------------------------------------------------------
+r79012 | funkydude | 2008-07-23 17:49:40 -0400 (Wed, 23 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/BadBoy/BadBoy.lua
+
+BadBoy: Updated filterset
+------------------------------------------------------------------------
+r78791 | funkydude | 2008-07-20 13:19:58 -0400 (Sun, 20 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/BadBoy/BadBoy.lua
+
+BadBoy: Updated Blacklist
+------------------------------------------------------------------------
+r78770 | funkydude | 2008-07-20 03:31:58 -0400 (Sun, 20 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/BadBoy/BadBoy.lua
+
+BadBoy: Updated Blacklist
+------------------------------------------------------------------------
+r78738 | funkydude | 2008-07-19 11:09:21 -0400 (Sat, 19 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/BadBoy/BadBoy.lua
+   M /trunk/BadBoy/BadBoy.toc
+
+BadBoy: Updated Blacklist
+------------------------------------------------------------------------

@@ -1,0 +1,355 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+	<Script file="localization.lua"/>
+	<Script file="localization.de.lua"/>
+	<Script file="localization.fr.lua"/>
+	<Script file="SSUI.lua"/>
+	
+	<!-- CONFIGURATION FRAME BACKGROUND -->
+	<Frame name="SSConfigTemplate" virtual="true">
+		<Anchors>			
+			<Anchor point="TOPRIGHT" relativeTo="SSUI" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension x="-15" y="-23" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Size>
+			<AbsDimension x="400" y="385"/>
+		</Size>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="9"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="9"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="2" right="2" top="2" bottom="2"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Scripts>
+			<OnLoad>
+				this:SetBackdropBorderColor( 0.4, 0.4, 0.4 );
+				this:SetBackdropColor( 0.15, 0.15, 0.15 );
+			</OnLoad>
+		</Scripts>				
+	</Frame>
+
+	<Frame name="SSDropDownTemplate" inherits="UIDropDownMenuTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="100" y="15"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentInfoText" inherits="GameFontNormalSmall">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parent">
+							<Offset>
+								<AbsDimension x="60" y="3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				UIDropDownMenu_Initialize( this, SSUI_DropDown_Initialize );
+			</OnLoad>
+			<OnEnter>
+				if( this.tooltipText ) then
+					GameTooltip:SetOwner( this, "ANCHOR_RIGHT" );
+					GameTooltip:SetText( this.tooltipText, nil, nil, nil, nil, 1 );
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="SSCategoryTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="100" y="15" />
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentText" inherits="GameFontNormal">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="LEFT" relativeTo="$parent">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
+
+	<!-- CHECK BOX TEMPLATE -->
+	<CheckButton name="SSCheckBoxTemplate" inherits="OptionsCheckButtonTemplate" virtual="true">
+		<Scripts>
+			<OnClick>
+				SSUI_CheckBox_OnClick();
+			</OnClick>
+			<OnEnter>
+				if( this.tooltipText ) then
+					GameTooltip:SetOwner( this, "ANCHOR_RIGHT" );
+					GameTooltip:SetText( this.tooltipText, nil, nil, nil, nil, 1 );
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</CheckButton>
+	
+	<!-- COLOR PICKER TEMPLATE -->
+	<Button name="SSColorPickerTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="18" y="18"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentBorder">
+					<Size>
+						<AbsDimension x="16" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="1.0" b="1.0"/>
+				</Texture>
+			</Layer>
+
+			<Layer level="BACKGROUND">
+				<FontString name="$parentText" inherits="GameFontNormalSmall">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parent">
+							<Offset>
+								<AbsDimension x="7" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>							
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnClick>
+				SSUI_OpenColorPicker();
+			</OnClick>
+			<OnEnter>
+				if( this.tooltipText ) then
+					GameTooltip:SetOwner( this, "ANCHOR_RIGHT" );
+					GameTooltip:SetText( this.tooltipText, nil, nil, nil, nil, 1 );
+				end
+
+				getglobal( this:GetName().."Border" ):SetVertexColor( NORMAL_FONT_COLOR.r, NORMAL_FONT_COLOR.g, NORMAL_FONT_COLOR.b );
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+				getglobal( this:GetName().."Border" ):SetVertexColor( HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b );
+
+			</OnLeave>
+		</Scripts>
+		<NormalTexture name="$parentNormalTexture" file="Interface\ChatFrame\ChatFrameColorSwatch"/>
+	</Button>
+	
+	<!-- SLIDER TEMPLATE -->
+	<Slider name="SSSliderTemplate" inherits="OptionsSliderTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="140" y="16"/>
+		</Size>
+		<Scripts>
+			<OnValueChanged>
+				SSUI_Slider_OnValueChanged();
+			</OnValueChanged>
+			<OnEnter>
+				if( this.tooltipText ) then
+					GameTooltip:SetOwner( this, "ANCHOR_RIGHT" );
+					GameTooltip:SetText( this.tooltipText, nil, nil, nil, nil, 1 );
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Slider>
+
+	<!-- INPUT BOX TEMPLATE -->	
+	<EditBox name="SSInputTemplate" inherits="InputBoxTemplate" autoFocus="false" virtual="true">
+		<Size>
+			<AbsDimension x="40" y="15"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentText" inherits="GameFontNormalSmall">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parent">
+							<Offset>
+								<AbsDimension x="5" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnTextChanged>
+				SSUI_EditBox_TextChanged();
+			</OnTextChanged>
+			<OnEnter>
+				if( this.tooltipText ) then
+					GameTooltip:SetOwner( this, "ANCHOR_RIGHT" );
+					GameTooltip:SetText( this.tooltipText, nil, nil, nil, nil, 1 );
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</EditBox>
+	
+	<!-- BUTTON AND TAB BUTTON TEMPLATE -->
+	<Button name="SSButtonTemplate" inherits="GameMenuButtonTemplate" virtual="true">
+		<Scripts>
+			<OnClick>
+				SSUI_Button_OnClick();
+			</OnClick>
+		</Scripts>
+	</Button>
+
+	<Button name="SSTabButtonTemplate" inherits="GameMenuButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="100" y="18"/>
+		</Size>
+		<Scripts>
+			<OnClick>
+				SSUI_TabButton_OnClick();
+			</OnClick>
+		</Scripts>
+		
+		<NormalFont inherits="GameFontHighlightSmall"/>
+		<HighlightFont inherits="GameFontHighlightSmall"/>
+		<DisabledFont inherits="GameFontDisableSmall"/>
+	</Button>
+
+
+	<Frame name="SSUI" toplevel="true" hidden="true" movable="true" enableKeyboard="false" parent="UIParent" ClampedToScreen="true">
+		<Size>
+			<AbsDimension x="530" y="425" />
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER" />
+		</Anchors>
+		<Scripts>
+			<OnLoad>
+				SSUI_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				SSUI_OnEvent( event );
+			</OnEvent>
+			<OnHide>
+				SSUI_OnHide();
+			</OnHide>
+			<OnShow>
+				SSUI_OnShow();
+			</OnShow>
+		</Scripts>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="SSUITitle" file="Interface\DialogFrame\UI-DialogBox-Header">
+					<Size>
+						<AbsDimension x="200" y="60" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="12" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<FontString name="SSUITitleText" inherits="GameFontNormal">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="SSUI">
+							<Offset>
+								<AbsDimension x="0" y="0" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />	
+				<Size>
+					<AbsDimension x="128" y="17" />
+				</Size>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+		<Frames>
+			<Button name="$parentMove">
+				<Size>
+					<AbsDimension x="100" y="30" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="7" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseUp>
+						if( SSUI.isMoving ) then
+							SSUI_SavePosition();
+							SSUI:StopMovingOrSizing();
+							SSUI.isMoving = false;
+						end
+					</OnMouseUp>
+					<OnMouseDown>
+						if( arg1 == "LeftButton" ) then
+							SSUI:StartMoving();
+							SSUI.isMoving = true;
+						elseif( arg1 == "RightButton" ) then
+							SSUI_Config.position = nil;
+							SSUI:ClearAllPoints();
+							SSUI:SetPoint( "CENTER", nil, nil, nil );
+						end
+					</OnMouseDown>
+					<OnEnter>
+						GameTooltip:SetOwner( this, "ANCHOR_RIGHT" );
+						GameTooltip:SetText( SSU_MOVE, nil, nil, nil, nil, 1 );
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+
+			<!-- CLOSE -->
+			<Button name="SSTabClose" inherits="SSTabButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="SSUI">
+						<Offset>
+							<AbsDimension x="14" y="20" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+	</Frame>
+</Ui>

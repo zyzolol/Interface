@@ -1,0 +1,106 @@
+------------------------------------------------------------------------
+r703 | nevcairiel | 2008-10-10 20:33:59 +0000 (Fri, 10 Oct 2008) | 3 lines
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-MultiLineEditBox.lua
+
+AceGUI-3.0 MultiLineEditBox Widget:
+- Properly disable the widget in SetDisabled
+- Adjust style to be conform to the other widgets
+------------------------------------------------------------------------
+r700 | nevcairiel | 2008-10-09 17:53:54 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   A /trunk (from /branches/RC1:699)
+
+Proper layout, take2
+------------------------------------------------------------------------
+r696 | nargiddley | 2008-10-09 10:23:56 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   M /branches/RC1/AceGUI-3.0/widgets/AceGUIWidget-Keybinding.lua
+
+AceGUI: Fix Keybinding widget text sometimes carrying over through a recycle.
+------------------------------------------------------------------------
+r694 | nargiddley | 2008-10-09 09:03:51 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   M /branches/RC1/AceGUI-3.0/widgets/AceGUIWidget-Keybinding.lua
+
+AceGUI: Keybinding widget will show "Not Bound" instead of being blank when no key is set.
+------------------------------------------------------------------------
+r693 | nargiddley | 2008-10-09 07:42:11 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   M /branches/RC1/AceGUI-3.0/widgets/AceGUIWidget-Keybinding.lua
+
+AceGUI: Keybinding widget's label doesn't take up space if it is blank.
+------------------------------------------------------------------------
+r690 | nevcairiel | 2008-09-30 16:18:06 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /branches/RC1
+   A /branches/RC1/.pkgmeta
+   M /branches/RC1/AceAddon-3.0
+   M /branches/RC1/AceConfig-3.0
+   M /branches/RC1/AceConfig-3.0/AceConfigCmd-3.0
+   M /branches/RC1/AceConfig-3.0/AceConfigDialog-3.0
+   M /branches/RC1/AceConfig-3.0/AceConfigDropdown-3.0
+   M /branches/RC1/AceConfig-3.0/AceConfigRegistry-3.0
+   M /branches/RC1/AceEvent-3.0
+   M /branches/RC1/AceLocale-3.0
+   M /branches/RC1/AceSerializer-3.0
+   M /branches/RC1/AceTab-3.0
+   M /branches/RC1/docs
+   M /branches/RC1/tests
+
+Added .pkgmeta and removed log template
+------------------------------------------------------------------------
+r689 | nevcairiel | 2008-09-26 20:55:53 +0000 (Fri, 26 Sep 2008) | 1 line
+Changed paths:
+   A /branches/RC1/AceTab-3.0
+   A /branches/RC1/AceTab-3.0/AceConfigTab-3.0.lua
+   A /branches/RC1/AceTab-3.0/AceTab-3.0.lua
+   A /branches/RC1/AceTab-3.0/AceTab-3.0.xml
+   A /trunk/AceTab-3.0
+   A /trunk/AceTab-3.0/AceConfigTab-3.0.lua
+   A /trunk/AceTab-3.0/AceTab-3.0.lua
+   A /trunk/AceTab-3.0/AceTab-3.0.xml
+
+Re-add AceTab-3.0, its history was lost due to weird svn behaviour. Does this thing even work?
+------------------------------------------------------------------------
+r688 | nevcairiel | 2008-09-26 20:39:43 +0000 (Fri, 26 Sep 2008) | 1 line
+Changed paths:
+   D /branches/Ace3
+   A /branches/RC1 (from /branches/Ace3/RC1:687)
+   D /tags/Ace3
+   A /tags/Alpha (from /tags/Ace3/Alpha:687)
+   A /tags/Beta (from /tags/Ace3/Beta:687)
+   D /trunk/Ace3
+   A /trunk/Ace3.lua (from /trunk/Ace3/Ace3.lua:687)
+   A /trunk/Ace3.toc (from /trunk/Ace3/Ace3.toc:687)
+   A /trunk/AceAddon-3.0 (from /trunk/Ace3/AceAddon-3.0:687)
+   A /trunk/AceBucket-3.0 (from /trunk/Ace3/AceBucket-3.0:687)
+   A /trunk/AceComm-3.0 (from /trunk/Ace3/AceComm-3.0:687)
+   A /trunk/AceConfig-3.0 (from /trunk/Ace3/AceConfig-3.0:687)
+   A /trunk/AceConsole-3.0 (from /trunk/Ace3/AceConsole-3.0:687)
+   A /trunk/AceDB-3.0 (from /trunk/Ace3/AceDB-3.0:687)
+   A /trunk/AceDBOptions-3.0 (from /trunk/Ace3/AceDBOptions-3.0:687)
+   A /trunk/AceEvent-3.0 (from /trunk/Ace3/AceEvent-3.0:687)
+   A /trunk/AceGUI-3.0 (from /trunk/Ace3/AceGUI-3.0:687)
+   A /trunk/AceHook-3.0 (from /trunk/Ace3/AceHook-3.0:687)
+   A /trunk/AceLocale-3.0 (from /trunk/Ace3/AceLocale-3.0:687)
+   A /trunk/AceSerializer-3.0 (from /trunk/Ace3/AceSerializer-3.0:687)
+   A /trunk/AceTimer-3.0 (from /trunk/Ace3/AceTimer-3.0:687)
+   A /trunk/CallbackHandler-1.0 (from /trunk/Ace3/CallbackHandler-1.0:687)
+   A /trunk/LICENSE.txt (from /trunk/Ace3/LICENSE.txt:687)
+   A /trunk/LibStub (from /trunk/Ace3/LibStub:687)
+   A /trunk/benchs (from /trunk/Ace3/benchs:687)
+   A /trunk/changelog.txt (from /trunk/Ace3/changelog.txt:687)
+   A /trunk/docs (from /trunk/Ace3/docs:687)
+   A /trunk/split.bat (from /trunk/Ace3/split.bat:687)
+   A /trunk/tests (from /trunk/Ace3/tests:687)
+   A /trunk/unsplit.bat (from /trunk/Ace3/unsplit.bat:687)
+
+Move everything around for a proper layout
+------------------------------------------------------------------------
+r686 | nevcairiel | 2008-09-18 21:22:35 +0000 (Thu, 18 Sep 2008) | 1 line
+Changed paths:
+   M /branches/Ace3/RC1/AceGUI-3.0/widgets/AceGUIWidget-TreeGroup.lua
+
+Ace3 - AceGUI-3.0 TreeGroup Widget - fix renamed template used in the tree view
+------------------------------------------------------------------------

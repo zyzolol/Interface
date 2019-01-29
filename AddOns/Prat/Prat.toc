@@ -1,0 +1,48 @@
+﻿## Interface: 20400
+
+## Title: Prat |cff8080ff2.0|r
+## Notes: A framework for chat frame modules.
+## Title-zhCN: |cff7fff7f-Ace2-|r Prat
+## Notes-zhCN: 整合的聊天增强助手
+## Notes-zhTW: 整合的聊天視窗模組。
+## Notes-frFR: Framework pour des modules concernant les fen\195\170tres de discussion
+## Notes-esES: Un entorno para modulos de chat.
+## Notes-deDE: Ein Grundaddon für Chatfenstermodule.
+## Notes-koKR: 대화창에 대한 다양한 기능을 제공하는 애드온입니다.
+## Version: 2.0 $Revision: 79344 $
+## Author: Prat Development Team
+## eMail: sylvanaar@mindspring.com,fin@instinct.org
+## URL: http://www.wowace.com/wiki/Prat
+
+## X-Category: Chat/Communication
+## X-Website: http://www.wowace.com/wiki/Prat
+## X-AceForum: 6243
+## X-Credits: Sylvanaar, Fin, Curney, Krtek, Industrial, Ammo, Cirk, Yrys (ChatLink), Leuchtturm, AnduinLothar, Satrina, <CWDG>昏睡墨鱼&月色狼影
+
+## X-RelSite-WoWI: 5474
+## X-RelSite-Curse: 7617
+## X-RelSite-UI.WoW: 4413
+
+## X-License: GPLv2
+
+## OptionalDeps: Ace2, LibSharedMedia-3.0, Expo, Prat_ProfileSavedVariables
+## X-Embeds: Ace2, Babble-Class-2.2, FuBarPlugin-2.0, DewdropLib, TabletLib, Deformat, LibSharedMedia-3.0, Waterfall-1.0, SinkLib
+
+## SavedVariables: PratDB, PratFuDB
+## SavedVariablesPerCharacter: PratPerCharDB
+
+## X-Wiki-BugTracker: [http://code.google.com/p/prat/issues/list Google Code Project issues]
+## X-Wiki-GoogleGroup
+
+embeds.xml
+
+extras\Frameworks.lua
+
+extras\util.lua
+
+Prat.lua
+
+modules.xml
+
+
+

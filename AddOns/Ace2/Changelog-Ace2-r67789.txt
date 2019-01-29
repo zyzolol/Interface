@@ -1,0 +1,38 @@
+------------------------------------------------------------------------
+r67789 | antiarc | 2008-04-03 00:18:53 -0400 (Thu, 03 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+
+Ace2 - Revert latest change, is causing massive table validation failures in many addons. ckknight, please pick up a white courtesy IRC. ckknight, please pick up a white courtesy IRC.
+------------------------------------------------------------------------
+r67781 | ckknight | 2008-04-02 23:41:17 -0400 (Wed, 02 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+
+.AceConsole-2.0 - fix a typo on line 2295 in :RegisterChatCommand, apparently.
+------------------------------------------------------------------------
+r66043 | rabbit | 2008-03-26 08:13:47 -0400 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/Ace2.toc
+   M /trunk/Ace2/AceAddon-2.0/AceAddon-2.0.toc
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.toc
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.toc
+   M /trunk/Ace2/AceDB-2.0/AceDB-2.0.toc
+   M /trunk/Ace2/AceDebug-2.0/AceDebug-2.0.toc
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.toc
+   M /trunk/Ace2/AceHook-2.1/AceHook-2.1.toc
+   M /trunk/Ace2/AceLibrary/AceLibrary.toc
+   M /trunk/Ace2/AceLocale-2.2/AceLocale-2.2.toc
+   M /trunk/Ace2/AceModuleCore-2.0/AceModuleCore-2.0.toc
+   M /trunk/Ace2/AceOO-2.0/AceOO-2.0.toc
+   M /trunk/Ace2/AceTab-2.0/AceTab-2.0.toc
+
+Ace2: TOC bumps + some AceEvent changes.
+------------------------------------------------------------------------
+r63812 | rabbit | 2008-03-07 09:06:50 -0500 (Fri, 07 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+
+.AceEvent-2.0: Get a more descriptive message for this new error that we can't track down.
+------------------------------------------------------------------------

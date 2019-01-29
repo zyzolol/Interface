@@ -1,0 +1,25 @@
+EXAMPLES
+
+Please submit your macros so I can place them here. PM Aquendyn on ui.worldofwar.net.
+
+~~==[[=^=^=^==>
+
+(by TheNose)
+I have some equipment that adds to my healing spell... unfortunately, they aren't good for anything else, so I have this macro to use the "healing" equipment, and call the healer macro, and then in 7 and 8 seconds, re-equip the regular armor:
+
+"SuperHealer"
+/equip Durable Pants of Healing
+/equip Tracker's Gloves of Healing
+/changeactionbar 1
+/in 7 /equip Glyphed MItts
+/in 8 /equip Warchief Kilt
+/print "SPECIAL HEALING"
+/click MacroClick_Healer
+
+"Healer"
+/cast [modifier:alt] Lesser Healing Wave
+/cast [nomodifier,nocombat] Healing Wave
+/cast [nomodifier,combat] Lesser Healing Wave
+
+~~==[[=^=^=^==>
+

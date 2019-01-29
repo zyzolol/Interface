@@ -1,0 +1,98 @@
+This file is the backbone of the addon. It provides <OnEvent>, <OnUpdate> and <OnLoad> services, and mediates Printing, Saved Variables, and Diagnostics, and other optional services.
+
+To become a module of the addon, add a table containing all the code of your addon to the <thismod> variable. The top of the file should look like this:
+
+		-- module setup
+		local me = { name = "spell"}
+		local mod = thismod
+		mod[me.name] = me
+	
+The only thing that changes from file to file is the part in inverted commas, "spell" here. That is the name of your module. Other modules would reference you by that name, e.g. <mod.spell> . As a result, the name has to be unique among all files.
+
+The following services are provided by Core.lua
+
+1) OnLoad handler. Implement a method called "onload" in your module and it will get called when the OnLoad handler runs. e.g.
+
+		me.onload = function()
+			(stuff)
+		end
+
+Note that the order in which OnLoad handlers are run on modules is not defined. Having said that:
+
+2) OnLoadComplete handler. Implement a method called "onloadcomplete" in your module and it will get called after the OnLoad handlers have been run on every module. This is useful if your module's initialisation code requires another module to be initialised, but in general try to avoid this.
+
+3) OnUpdate handler. Implement a method called "onupdate" in your module and it will get called on every OnUpdate trigger. Note that OnUpdates will not run until after all OnLoadComplete handlers have run.
+
+Alternatively, if you have a number of different methods that you want called periodically with different, specific periods, implement a table "myonupdates" as in this example
+
+		me.myonupdates = 
+		{
+			updatescores = 0.0,
+			updatenames = 0.5,
+		}
+		
+		me.updatescores = function()
+			(...)
+		end
+		
+		me.updatenames = function()
+			(...)
+		end
+		
+The keys of the table must match functions in your module. The values are the minimum number of seconds allowed between subsequent method calls. 
+
+4) OnEvent handler. First implement a list of strings "myevents" with the names of the events you want, e.g.
+
+		me.myevents = { "CHAT_MSG_SPELL_SELF_BUFF", "CHAT_MSG_SYSTEM", }
+	
+Then implement a method "onevent", e.g.
+
+		me.onevent = function()
+			(...)
+		end
+		
+No arguments will be passed to this method, so you'll have to refer to the global variables event, arg1, arg2, etc. Make sure not to edit them, since other addons might need them!
+
+5) Saved Variables Service. Implement a table "save" with anything you want maintained when the user logs out in key-value pairs, e.g.
+
+		me.save = 
+		{
+			hits = 100,
+			moves = 
+			{
+				physical = 42,
+				spell = 20,
+			},
+		}
+
+This table will be automatically saved. You should put the default values into this table. See Framework\SavedVariables.lua for more info.
+
+6) [Optional] Net Message Service. Your module can be informed of specific addon messages sent by other players with this addon. Implement a table <me.mynetmessages> with a list of commands you want and a function <me.onnetmessage> to receive them, e.g.
+
+		me.mynetmessages = { "t", "clear", "bossevent" }
+	
+		me.onnetmessage = function(author, command, data)
+			
+			if messagetype = "clear" then
+				...
+		end
+		
+See Services\NetIn.lua for more info.
+
+7) [Optional] Parser Service. This is like an OnEvent service, but you pick up specific combat log messages that are parsed for you. Implement a table <me.myparsers> with descriptions of the events you want to receive, and a callback method <me.onparse>, like so:
+		
+		me.myparsers = 
+		{
+			{"powergain", "POWERGAINSELFSELF", "CHAT_MSG_SPELL_SELF_BUFF"},
+			{"healonself", "HEALEDCRITSELFSELF", "CHAT_MSG_SPELL_SELF_BUFF"},
+			{"healonself", "HEALEDSELFSELF", "CHAT_MSG_SPELL_SELF_BUFF"},
+		}
+		
+		me.onparse = function(identifier, ...)			
+			...
+		end
+		
+See Services\Regex.lua for more info.
+
+8) Print Service. The method <mod.print(message, [...])> exists. See below in Core.lua.
+]]

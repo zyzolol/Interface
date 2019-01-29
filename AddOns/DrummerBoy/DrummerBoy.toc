@@ -1,0 +1,11 @@
+## Interface: 20400
+## Title: DrummerBoy
+## Notes: DrummerBoy announces when drums have been used, and when they expire.
+## Author: Timewasted
+## X-Category: Raid
+## Version: 1.0
+## OptionalDeps: Ace2
+## SavedVariables: DrummerBoyDB
+
+embeds.xml
+DrummerBoy.lua

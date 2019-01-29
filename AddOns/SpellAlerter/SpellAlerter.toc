@@ -1,0 +1,9 @@
+## Interface: 20400
+## Title: Spell Alerter
+## Notes: Tracks spells
+## Version: 1.33
+## Author: Kollektiv
+## DefaultState: Enabled
+## SavedVariables: SpellAlerterDB
+
+SpellAlerter.lua

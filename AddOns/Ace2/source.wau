@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <interface xmlns="http://www.wowace.com/xmlns/wowaddon/">20400</interface>
+  <author>Ace Development Team</author>
+  <category>Library</category>
+  <description>AddOn development framework</description>
+  <enclosure length="101454" type="application/zip" url="http://files.wowace.com/Ace2/Ace2-r79524.zip"/>
+  <guid>http://files.wowace.com/Ace2/Ace2-r79524.zip</guid>
+  <link>http://www.wowace.com</link>
+  <pubDate>Wed, 30 Jul 2008 21:44:09 +0000</pubDate>
+  <stable xmlns="http://www.wowace.com/xmlns/wowaddon/">false</stable>
+  <title>Ace2</title>
+  <version xmlns="http://www.wowace.com/xmlns/wowaddon/">79524</version>
+</item>

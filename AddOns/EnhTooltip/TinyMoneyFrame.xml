@@ -1,0 +1,175 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+<!--
+	EnhTooltip - Additional function hooks to allow hooks into more tooltips
+	Version: 5.0.0 (BillyGoat)
+	Revision: $Id: TinyMoneyFrame.xml 2193 2007-09-18 06:10:48Z mentalpower $
+	URL: http://auctioneeraddon.com/dl/EnhTooltip
+
+	License:
+		This program is free software; you can redistribute it and/or
+		modify it under the terms of the GNU General Public License
+		as published by the Free Software Foundation; either version 2
+		of the License, or (at your option) any later version.
+
+		This program is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		GNU General Public License for more details.
+
+		You should have received a copy of the GNU General Public License
+		along with this program(see GPL.txt); if not, write to the Free Software
+		Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+	Note:
+		This AddOn's source code is specifically designed to work with
+		World of Warcraft's interpreted AddOn system.
+		You have an implicit licence to use this AddOn with these facilities
+		since that is it's designated purpose as per:
+		http://www.fsf.org/licensing/licenses/gpl-faq.html#InterpreterIncompat
+-->
+	<Frame name="TinyMoneyFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="128" y="10"/>
+		</Size>
+		<Frames>
+			<Button name="$parentCopperButton">
+				<Size>
+					<AbsDimension x="14" y="10"/>
+				</Size>
+				<Anchors>
+					<Anchor point="RIGHT">
+						<Offset>
+							<AbsDimension x="-10" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						local parent = self:GetParent();
+						OpenCoinPickupFrame(1, MoneyTypeInfo[parent.moneyType].UpdateFunc(), parent);
+						parent.hasPickup = 1;
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\MoneyFrame\UI-MoneyIcons">
+					<Size>
+						<AbsDimension x="10" y="10"/>
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT"/>
+					</Anchors>
+					<TexCoords left="0.5" right="0.75" top="0" bottom="1"/>
+				</NormalTexture>
+				<ButtonText name="$parentText">
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset>
+								<AbsDimension x="-12" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</ButtonText>
+				<NormalFont inherits="GameFontNormalSmall" justifyH="RIGHT"/>
+				<PushedTextOffset>
+					<AbsDimension x="0" y="0"/>
+				</PushedTextOffset>
+			</Button>
+			<Button name="$parentSilverButton">
+				<Size>
+					<AbsDimension x="14" y="10"/>
+				</Size>
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentCopperButton" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-6" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						local parent = self:GetParent();
+						OpenCoinPickupFrame(COPPER_PER_SILVER, MoneyTypeInfo[parent.moneyType].UpdateFunc(), parent);
+						parent.hasPickup = 1;
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\MoneyFrame\UI-MoneyIcons">
+					<Size>
+						<AbsDimension x="10" y="10"/>
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT"/>
+					</Anchors>
+					<TexCoords left="0.25" right="0.5" top="0" bottom="1"/>
+				</NormalTexture>
+				<ButtonText name="$parentText">
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset>
+								<AbsDimension x="-12" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</ButtonText>
+				<NormalFont inherits="GameFontNormalSmall" justifyH="RIGHT"/>
+				<PushedTextOffset>
+					<AbsDimension x="0" y="0"/>
+				</PushedTextOffset>
+			</Button>
+			<Button name="$parentGoldButton">
+				<Size>
+					<AbsDimension x="14" y="10"/>
+				</Size>
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentSilverButton" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-6" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						local parent = self:GetParent();
+						OpenCoinPickupFrame(COPPER_PER_GOLD, MoneyTypeInfo[parent.moneyType].UpdateFunc(), parent);
+						parent.hasPickup = 1;
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\MoneyFrame\UI-MoneyIcons">
+					<Size>
+						<AbsDimension x="10" y="10"/>
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT"/>
+					</Anchors>
+					<TexCoords left="0" right="0.25" top="0" bottom="1"/>
+				</NormalTexture>
+				<ButtonText name="$parentText">
+					<Anchors>
+						<Anchor point="LEFT"/>
+					</Anchors>
+				</ButtonText>
+				<NormalFont inherits="GameFontNormalSmall" justifyH="LEFT"/>
+				<PushedTextOffset>
+					<AbsDimension x="0" y="0"/>
+				</PushedTextOffset>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				SmallMoneyFrame_OnLoad(self);
+			</OnLoad>
+			<OnEvent>
+				MoneyFrame_OnEvent(self, event, ...);
+			</OnEvent>
+			<OnShow>
+				TinyMoneyFrame_UpdateMoney(self);
+			</OnShow>
+			<OnHide>
+				if ( self.hasPickup == 1 ) then
+					CoinPickupFrame:Hide();
+					self.hasPickup = 0;
+				end
+			</OnHide>
+		</Scripts>
+	</Frame>
+</Ui>

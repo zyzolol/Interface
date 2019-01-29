@@ -1,0 +1,134 @@
+------------------------------------------------------------------------
+r174 | Whitetooth | 2008-10-12 15:23:22 +0000 (Sun, 12 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/RatingBuster-Locale-enUS.lua
+   M /trunk/RatingBuster.toc
+
+RatingBuster: Added "ranged critical strike" pattern for Heartseeker Scope
+------------------------------------------------------------------------
+r173 | 7destiny | 2008-10-09 17:22:29 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/RatingBuster-Locale-koKR.lua
+
+RatingBuster: fix koKR
+------------------------------------------------------------------------
+r172 | 7destiny | 2008-10-09 11:51:59 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/RatingBuster-Locale-koKR.lua
+
+RatingBuster: koKR Update
+------------------------------------------------------------------------
+r171 | 7destiny | 2008-10-07 14:52:44 +0000 (Tue, 07 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/RatingBuster-Locale-koKR.lua
+
+RatingBuster: koKR Update
+------------------------------------------------------------------------
+r170 | Whitetooth | 2008-10-05 15:47:48 +0000 (Sun, 05 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/RatingBuster.lua
+
+RatingBuster: WotLK Druid: Added options for Spell Damage from Spirit, Healing from Spirit
+------------------------------------------------------------------------
+r168 | Whitetooth | 2008-10-02 11:50:05 +0000 (Thu, 02 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/RatingBuster.lua
+
+RatingBuster: Fixed: when removing gems it will continue to show the gem text in empty sockets
+------------------------------------------------------------------------
+r166 | nevcairiel | 2008-10-02 08:22:51 +0000 (Thu, 02 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/.pkgmeta
+
+Fix .pkgmeta
+-- Don't list libraries as OptDep in .pkgmeta, or the updater will get confused
+------------------------------------------------------------------------
+r164 | Whitetooth | 2008-10-01 20:09:35 +0000 (Wed, 01 Oct 2008) | 1 line
+Changed paths:
+   M /trunk
+
+RatingBuster: externals update
+------------------------------------------------------------------------
+r163 | Whitetooth | 2008-10-01 20:07:32 +0000 (Wed, 01 Oct 2008) | 1 line
+Changed paths:
+   M /trunk
+   M /trunk/.pkgmeta
+
+RatingBuster: .pkgmeta and externals update
+------------------------------------------------------------------------
+r162 | root | 2008-09-30 16:08:53 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r161 | root | 2008-09-29 21:56:36 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   M /trunk
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r159 | root | 2008-09-29 20:58:34 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/RatingBuster
+   A /trunk (from /tmp/trunk/RatingBuster:158)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r158 | whitetooth | 2008-09-29 12:16:14 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/RatingBuster/RatingBuster.lua
+
+RatingBuster: Use the new StatLogic API
+------------------------------------------------------------------------
+r157 | whitetooth | 2008-09-27 16:14:56 +0000 (Sat, 27 Sep 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RatingBuster/RatingBuster-Locale-enUS.lua
+   M /tmp/trunk/RatingBuster/RatingBuster.lua
+
+RatingBuster: 
+- WotLK: Added avoidance diminishing return support for StatSummary diff values
+------------------------------------------------------------------------
+r156 | 7destiny | 2008-09-23 10:35:20 +0000 (Tue, 23 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/RatingBuster/RatingBuster-Locale-koKR.lua
+
+RatingBuster: koKR Update
+------------------------------------------------------------------------
+r155 | whitetooth | 2008-09-14 12:14:02 +0000 (Sun, 14 Sep 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RatingBuster/RatingBuster-Locale-enUS.lua
+   M /tmp/trunk/RatingBuster/RatingBuster.lua
+
+RatingBuster: 
+- StatSummary: Added Ranged Hit Chance, Ranged Hit Rating, Ranged Haste, Ranged Haste Rating
+------------------------------------------------------------------------
+r154 | whitetooth | 2008-09-14 10:39:28 +0000 (Sun, 14 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/RatingBuster/RatingBuster-Locale-enUS.lua
+
+RatingBuster: Fixed locale error
+------------------------------------------------------------------------
+r153 | whitetooth | 2008-09-14 09:24:11 +0000 (Sun, 14 Sep 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/RatingBuster/RatingBuster-Locale-enUS.lua
+   M /tmp/trunk/RatingBuster/RatingBuster.lua
+
+RatingBuster:
+- Removed test code in options table
+- StatSummary: Added Ranged Crit Chance, and Ranged Crit Rating
+------------------------------------------------------------------------
+r152 | whitetooth | 2008-09-12 13:35:18 +0000 (Fri, 12 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/RatingBuster/RatingBuster-Locale-enUS.lua
+   M /tmp/trunk/RatingBuster/RatingBuster.lua
+
+RatingBuster: Support for Armor Penetration Rating
+------------------------------------------------------------------------
+r151 | whitetooth | 2008-09-08 17:31:15 +0000 (Mon, 08 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/RatingBuster/RatingBuster-Locale-enUS.lua
+
+RatingBuster: enUS: Don't convert Gronnstalker bonus
+------------------------------------------------------------------------

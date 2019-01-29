@@ -1,0 +1,62 @@
+------------------------------------------------------------------------
+r1091 | nevcairiel | 2008-10-09 21:59:28 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/AceAddon-2.0/AceAddon-2.0.lua
+   M /trunk/AceComm-2.0/AceComm-2.0.lua
+   M /trunk/AceConsole-2.0/AceConsole-2.0.lua
+   M /trunk/AceDB-2.0/AceDB-2.0.lua
+   M /trunk/AceDebug-2.0/AceDebug-2.0.lua
+   M /trunk/AceEvent-2.0/AceEvent-2.0.lua
+   M /trunk/AceHook-2.1/AceHook-2.1.lua
+   M /trunk/AceLibrary/AceLibrary.lua
+   M /trunk/AceLocale-2.2/AceLocale-2.2.lua
+   M /trunk/AceModuleCore-2.0/AceModuleCore-2.0.lua
+   M /trunk/AceOO-2.0/AceOO-2.0.lua
+   M /trunk/AceTab-2.0/AceTab-2.0.lua
+
+WoWAce Post-Processing: Virtually inflate Library Revision numbers for proper upgrade path
+------------------------------------------------------------------------
+r1090 | root | 2008-09-29 22:12:06 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r1088 | root | 2008-09-29 20:57:31 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/Ace2
+   A /trunk (from /tmp/trunk/Ace2:1087)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r1087 | arrowmaster | 2008-09-29 10:25:41 +0000 (Mon, 29 Sep 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+Ace2:
+-fix AceComm's ChatFrame_MessageEventHandler hook
+-whoever told me they 'tested' this change on live and it worked fine can DIAF
+------------------------------------------------------------------------
+r1086 | arrowmaster | 2008-09-29 10:06:31 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/Ace2/AceDB-2.0/AceDB-2.0.lua
+
+Ace2: remove a WotLK hack thats not needed anymore
+------------------------------------------------------------------------
+r1085 | arrowmaster | 2008-09-29 09:54:50 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/Ace2/AceAddon-2.0/AceAddon-2.0.lua
+   M /tmp/trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+   M /tmp/trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+   M /tmp/trunk/Ace2/AceDB-2.0/AceDB-2.0.lua
+   M /tmp/trunk/Ace2/AceDebug-2.0/AceDebug-2.0.lua
+   M /tmp/trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+   M /tmp/trunk/Ace2/AceHook-2.1/AceHook-2.1.lua
+   M /tmp/trunk/Ace2/AceLibrary/AceLibrary.lua
+   M /tmp/trunk/Ace2/AceLocale-2.2/AceLocale-2.2.lua
+   M /tmp/trunk/Ace2/AceModuleCore-2.0/AceModuleCore-2.0.lua
+   M /tmp/trunk/Ace2/AceOO-2.0/AceOO-2.0.lua
+   M /tmp/trunk/Ace2/AceTab-2.0/AceTab-2.0.lua
+
+Ace2: merge WotLK branch into trunk
+------------------------------------------------------------------------

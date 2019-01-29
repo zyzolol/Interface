@@ -1,0 +1,105 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+<!--
+	EnhTooltip - Additional function hooks to allow hooks into more tooltips
+	Version: 5.0.0 (BillyGoat)
+	Revision: $Id: Tooltip.xml 2193 2007-09-18 06:10:48Z mentalpower $
+	URL: http://auctioneeraddon.com/dl/EnhTooltip
+
+	License:
+		This program is free software; you can redistribute it and/or
+		modify it under the terms of the GNU General Public License
+		as published by the Free Software Foundation; either version 2
+		of the License, or (at your option) any later version.
+
+		This program is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		GNU General Public License for more details.
+
+		You should have received a copy of the GNU General Public License
+		along with this program(see GPL.txt); if not, write to the Free Software
+		Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+	Note:
+		This AddOn's source code is specifically designed to work with
+		World of Warcraft's interpreted AddOn system.
+		You have an implicit licence to use this AddOn with these facilities
+		since that is it's designated purpose as per:
+		http://www.fsf.org/licensing/licenses/gpl-faq.html#InterpreterIncompat
+-->
+
+	<Frame name="EnhancedTooltipMoneyTemplate" inherits="TinyMoneyFrameTemplate" frameStrata="TOOLTIP" hidden="true" virtual="true">
+		<Scripts>
+			<OnLoad>
+				SmallMoneyFrame_OnLoad()
+				MoneyFrame_SetType("STATIC")
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<Frame name="EnhancedTooltipTemplate" frameStrata="TOOLTIP" hidden="true" virtual="true">
+		<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+
+		<Layers>
+			<Layer level="INFO">
+
+				<Texture name="$parentIcon" file="Interface\Buttons\UI-Quickslot2" hidden="true">
+					<Size>
+						<AbsDimension x="32" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="-7" y="-7"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+
+				<FontString name="$parentHeader1" inherits="GameFontNormal" hidden="true">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="10" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+
+				<FontString name="$parentText1" inherits="GameFontNormal" hidden="true">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="10" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+
+			</Layer>
+		</Layers>
+	</Frame>
+
+	<Frame name="EnhancedTooltip" inherits="EnhancedTooltipTemplate" parent="UIParent" hidden="true"/>
+
+	<Frame name="EnhancedUpdate" parent="UIParent" hidden="false">
+		<Scripts>
+			<OnLoad>
+				EnhTooltip.OnLoad()
+			</OnLoad>
+			<OnUpdate>
+				EnhTooltip.SetElapsed(elapsed);
+			</OnUpdate>
+		</Scripts>
+	</Frame>
+</Ui>

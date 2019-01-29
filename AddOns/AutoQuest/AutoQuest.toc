@@ -1,0 +1,4 @@
+## Interface: 20400
+## Title: AutoQuest
+## Description: Automatically accepts and completes quests.
+AutoQuest.xml

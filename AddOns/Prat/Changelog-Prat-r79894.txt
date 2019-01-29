@@ -1,0 +1,131 @@
+------------------------------------------------------------------------
+r79894 | gchudov | 2008-08-06 19:03:30 -0400 (Wed, 06 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/Prat/Prat_Modules/modules/ChannelColorMemory.lua
+
+Prat: ruRU localization
+
+------------------------------------------------------------------------
+r79345 | sylvanaar | 2008-07-28 15:38:26 -0400 (Mon, 28 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Prat/Prat.lua
+   M /trunk/Prat/Prat_ProfileSavedVars/Prat_ProfileSavedVars.toc
+
+Prat: Added a LoadAddOn call and made the profiler LoD, this seems to prevent the profiler from reporting the correct amount of memory used by the saved vars.
+------------------------------------------------------------------------
+r79344 | sylvanaar | 2008-07-28 15:16:43 -0400 (Mon, 28 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Prat/Prat.toc
+
+Prat: Add an optdep on the saved var profile pullout, so it wont wipe out your saved vars. After a reload UI, your saved vars are copied. You can see how much memory they use. Then you can disable the addon, it will retain a copy of them. This can be restored by causing Prat to load before the profile pullout.
+------------------------------------------------------------------------
+r79343 | sylvanaar | 2008-07-28 14:56:10 -0400 (Mon, 28 Jul 2008) | 1 line
+Changed paths:
+   A /trunk/Prat/Prat_ProfileSavedVars
+   A /trunk/Prat/Prat_ProfileSavedVars/Prat_ProfileSavedVars.toc
+
+Prat: Add a saved variable pullout to profile your saved variable size. It has a side benefit that it backs up your saved variables too.
+------------------------------------------------------------------------
+r79186 | sylvanaar | 2008-07-26 06:56:12 -0400 (Sat, 26 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Prat/Prat.lua
+   M /trunk/Prat/extras/Frameworks.lua
+
+Prat: Delete a relic from the framework wars
+------------------------------------------------------------------------
+r79185 | sylvanaar | 2008-07-26 06:49:52 -0400 (Sat, 26 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Prat/Prat.lua
+   M /trunk/Prat/Prat_Modules/extras/Presets.lua
+   M /trunk/Prat/Prat_Modules/modules/AddonMessages.lua
+   M /trunk/Prat/Prat_Modules/modules/Alias.lua
+   M /trunk/Prat/Prat_Modules/modules/AltNames.lua
+   M /trunk/Prat/Prat_Modules/modules/ChannelColorMemory.lua
+   M /trunk/Prat/Prat_Modules/modules/ChannelNames.lua
+   M /trunk/Prat/Prat_Modules/modules/ChannelReordering.lua
+   M /trunk/Prat/Prat_Modules/modules/ChannelSticky.lua
+   M /trunk/Prat/Prat_Modules/modules/ChatButtons.lua
+   M /trunk/Prat/Prat_Modules/modules/ChatFrames.lua
+   M /trunk/Prat/Prat_Modules/modules/ChatLangButton.lua
+   M /trunk/Prat/Prat_Modules/modules/ChatLink.lua
+   M /trunk/Prat/Prat_Modules/modules/ChatLog.lua
+   M /trunk/Prat/Prat_Modules/modules/ChatTabs.lua
+   M /trunk/Prat/Prat_Modules/modules/Clear.lua
+   M /trunk/Prat/Prat_Modules/modules/CopyChat.lua
+   M /trunk/Prat/Prat_Modules/modules/CustomFilters.lua
+   M /trunk/Prat/Prat_Modules/modules/Editbox.lua
+   M /trunk/Prat/Prat_Modules/modules/EventNames.lua
+   M /trunk/Prat/Prat_Modules/modules/Fading.lua
+   M /trunk/Prat/Prat_Modules/modules/Filtering.lua
+   M /trunk/Prat/Prat_Modules/modules/Font.lua
+   M /trunk/Prat/Prat_Modules/modules/History.lua
+   M /trunk/Prat/Prat_Modules/modules/Keybindings.lua
+   M /trunk/Prat/Prat_Modules/modules/Paragraph.lua
+   M /trunk/Prat/Prat_Modules/modules/PlayerNames.lua
+   M /trunk/Prat/Prat_Modules/modules/PopupMessage.lua
+   D /trunk/Prat/Prat_Modules/modules/Presets.lua
+   M /trunk/Prat/Prat_Modules/modules/Scroll.lua
+   M /trunk/Prat/Prat_Modules/modules/ServerNames.lua
+   M /trunk/Prat/Prat_Modules/modules/Sounds.lua
+   M /trunk/Prat/Prat_Modules/modules/Substitutions.lua
+   M /trunk/Prat/Prat_Modules/modules/TellTarget.lua
+   M /trunk/Prat/Prat_Modules/modules/Timestamps.lua
+   M /trunk/Prat/Prat_Modules/modules/UrlCopy.lua
+   M /trunk/Prat/samples/blank-module.lua
+
+Prat: Removed the categories and statuses tables. Grep'ed out category specification in every module. Deleted the deprecated presets module. Its been long enough, they shouldn't have the old one anymore.
+------------------------------------------------------------------------
+r79180 | sylvanaar | 2008-07-26 05:19:18 -0400 (Sat, 26 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Prat/Prat.lua
+
+Prat: Removed module categories from base prat. They'll need to be grepped out of the modules.
+------------------------------------------------------------------------
+r79179 | sylvanaar | 2008-07-26 05:03:46 -0400 (Sat, 26 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Prat/Prat.lua
+   A /trunk/Prat/Prat_Debug/Prat_Debug.toc
+   A /trunk/Prat/Prat_Debug/includes.xml
+
+Prat: Add toc/xml to the debug pullout (still not used though)
+------------------------------------------------------------------------
+r79178 | sylvanaar | 2008-07-26 04:56:14 -0400 (Sat, 26 Jul 2008) | 1 line
+Changed paths:
+   A /trunk/Prat/sounds/Bell.mp3 (from /trunk/Prat/sounds/chatmod3.mp3:79128)
+   A /trunk/Prat/sounds/Chime.mp3
+   A /trunk/Prat/sounds/IM.mp3
+   A /trunk/Prat/sounds/Xylo.mp3
+   D /trunk/Prat/sounds/chatmod1.mp3
+   D /trunk/Prat/sounds/chatmod3.mp3
+
+Prat: Reorganize the sounds provided, adds a couple more. This added about 30k, so want to try to compress some of the sound files.
+------------------------------------------------------------------------
+r79173 | sylvanaar | 2008-07-26 04:14:05 -0400 (Sat, 26 Jul 2008) | 1 line
+Changed paths:
+   A /trunk/Prat/Prat_Debug/profiling.lua (from /trunk/Prat/extras/profiling.lua:79128)
+   D /trunk/Prat/extras/blank-module.lua
+   D /trunk/Prat/extras/no-dependency.lua
+   D /trunk/Prat/extras/profiling.lua
+   A /trunk/Prat/samples
+   A /trunk/Prat/samples/blank-module.lua (from /trunk/Prat/extras/blank-module.lua:79128)
+   A /trunk/Prat/samples/no-dependency.lua (from /trunk/Prat/extras/no-dependency.lua:79128)
+
+Prat: More prep work for 3.0, this just moved some files to a new folder 'samples' or to the Prat_Debug pullout
+------------------------------------------------------------------------
+r79020 | sylvanaar | 2008-07-23 20:09:04 -0400 (Wed, 23 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Prat/Prat.lua
+   A /trunk/Prat/Prat_Debug
+   A /trunk/Prat/Prat_Debug/util.lua (from /trunk/Prat/extras/util.lua:78940)
+   M /trunk/Prat/Prat_FuBar/PratFu.lua
+   M /trunk/Prat/Prat_Modules/modules/Substitutions.lua
+   M /trunk/Prat/extras/util.lua
+
+Prat: Some prep work, removed most of the util library, and NOP'ed the debug calls. Created Prat_Debug for later use.
+------------------------------------------------------------------------
+r78223 | sylvanaar | 2008-07-11 02:00:10 -0400 (Fri, 11 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Prat/Prat_Modules/modules/Editbox.lua
+
+Prat: Editbox module fixes for border/background. Fin where are you?
+------------------------------------------------------------------------

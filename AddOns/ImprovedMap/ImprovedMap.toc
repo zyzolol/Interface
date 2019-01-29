@@ -1,0 +1,9 @@
+## Interface: 20400
+## Author: modernist
+## Title: ImprovedMap
+## Notes: make the map better.
+
+map\mini.lua
+map\pvp.lua
+map\world.lua
+map\pins\pins.lua

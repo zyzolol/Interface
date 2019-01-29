@@ -1,0 +1,28 @@
+------------------------------------------------------------------------
+r79524 | arrowmaster | 2008-07-30 17:37:13 -0400 (Wed, 30 Jul 2008) | 4 lines
+Changed paths:
+   M /trunk/Ace2/AceAddon-2.0/AceAddon-2.0.lua
+
+Ace2:
+- added fix for new IsAddOnLoaded() behavior in WotLK beta
+- all future WotLK fixes will be in the Ace2 WotLK branch until they can be made to work on both live and beta
+- this commit will probably make the WowAce Packagemancer spend atleast a good hour repacking 1000+ addons with the new AceAddon-2.0 =(
+------------------------------------------------------------------------
+r78794 | ckknight | 2008-07-20 13:35:39 -0400 (Sun, 20 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - set the hooks to pass in all arguments.
+------------------------------------------------------------------------
+r78793 | ckknight | 2008-07-20 13:31:14 -0400 (Sun, 20 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - fix issue with ChatFrame_MessageEventHandler hook and WotLK
+------------------------------------------------------------------------
+r78792 | ckknight | 2008-07-20 13:22:36 -0400 (Sun, 20 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+
+.AceConsole-2.0 - make chat input handling work with WotLK
+------------------------------------------------------------------------

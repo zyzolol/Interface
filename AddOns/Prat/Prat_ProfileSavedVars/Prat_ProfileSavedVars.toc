@@ -1,0 +1,12 @@
+﻿## Interface: 20400
+
+## Title: Prat |cff8080ff2.0|r (Saved Vars)
+
+## LoadOnDemand: 1
+
+## SavedVariables: PratDB, PratFuDB
+## SavedVariablesPerCharacter: PratPerCharDB
+
+
+
+

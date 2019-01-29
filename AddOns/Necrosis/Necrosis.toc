@@ -1,0 +1,60 @@
+## Interface: 20400
+## Title: Necrosis
+## Title-frFR: Necrosis
+## Author: TarCalion (based upon the works of the original authors: Lomig, Liadora & Eliah)
+## Version: 2.2
+## Notes: Warlock UI & Shard Management
+## Notes-frFR: Gestion graphique des shards.
+## eMail: lomig@larmes-cenarius.net
+## URL: http://necrosis.larmes-cenarius.net
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariablesPerCharacter: NecrosisConfig
+#
+Necrosis.xml
+
+Localization.lua
+
+Locales\Functions-fr.lua
+Locales\Functions-en.lua
+Locales\Functions-de.lua
+Locales\Functions-es.lua
+Locales\Functions-tw.lua
+Locales\Functions-cn.lua
+
+Locales\Dialog-fr.lua
+Locales\Dialog-en.lua
+Locales\Dialog-de.lua
+Locales\Dialog-es.lua
+Locales\Dialog-tw.lua
+Locales\Dialog-cn.lua
+
+Speech\Speech-fr.lua
+Speech\Speech-en.lua
+Speech\Speech-de.lua
+Speech\Speech-es.lua
+Speech\Speech-tw.lua
+Speech\Speech-cn.lua
+
+Initialize.lua
+Message.lua
+
+Timers\Functions.lua
+Timers\GraphicalTimers.lua
+Timers\OtherTimers.lua
+
+XML\Attributes.lua
+XML\XML.lua
+
+XML\Panel.lua
+XML\Options-Messages.lua
+XML\Options-Sphere.lua
+XML\Options-Buttons.lua
+XML\Options-Menus.lua
+XML\Options-Timers.lua
+XML\Options-Misc.lua
+
+ClickBinder.lua
+
+Necrosis.lua
+

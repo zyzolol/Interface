@@ -1,0 +1,89 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+	<Script file="localization.lua"/>
+	<Script file="localization.de.lua"/>
+	<Script file="localization.fr.lua"/>
+	<Script file="SSWSG.lua"/>
+
+	<Frame name="SSWSG">
+		<Scripts>
+			<OnLoad>
+				SSWSG_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				SSWSG_OnEvent( event );
+			</OnEvent>
+		</Scripts>
+	</Frame>
+
+	<Frame name="SSWorldFlag" frameStrata="LOW" enableMouse="true" inherits="SecureActionButtonTemplate" parent="UIParent" hidden="true">
+		<Size>
+			<AbsDimension x="150" y="80" />
+		</Size>
+		<Anchors>
+			<Anchor point="LEFT" relativePoint="LEFT" relativeTo="WorldStateAlwaysUpFrame">
+				<Offset>
+					<AbsDimension x="50" y="-15" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Frames>
+			<Button name="$parentHorde" inherits="SecureActionButtonTemplate">
+				<Size>
+					<AbsDimension x="150" y="25"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="LEFT" relativeTo="AlwaysUpFrame1">
+						<Offset>
+							<AbsDimension x="90" y="12"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<FontString name="$parentText" inherits="GameFontNormal" nonspacewrap="false" justifyH="LEFT">
+							<Size>
+								<AbsDimension x="150" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="$parent">
+									<Offset>
+										<AbsDimension x="0" y="0" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Button>
+
+			<Button name="$parentAlliance" inherits="SecureActionButtonTemplate">
+				<Size>
+					<AbsDimension x="150" y="25"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="LEFT" relativeTo="AlwaysUpFrame2">
+						<Offset>
+							<AbsDimension x="90" y="12" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND"> 
+						<FontString name="$parentText" inherits="GameFontNormal" nonspacewrap="false" justifyH="LEFT">
+							<Size>
+								<AbsDimension x="150" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="$parent">
+									<Offset>
+										<AbsDimension x="0" y="0" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Button>
+		</Frames>
+	</Frame>
+</Ui>

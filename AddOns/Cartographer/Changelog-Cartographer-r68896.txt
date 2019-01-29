@@ -1,0 +1,200 @@
+------------------------------------------------------------------------
+r68896 | arrowmaster | 2008-04-10 05:40:01 -0400 (Thu, 10 Apr 2008) | 3 lines
+Changed paths:
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Data.lua
+   M /trunk/Cartographer/Cartographer_InstanceMaps/InstanceMaps.lua
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Scripts/pack.lua
+   M /trunk/Cartographer/Cartographer_InstanceNotes/notes.lua
+
+Cartographer:
+-reverted commit 68238 by isler that removed the renaming of the "Tempest Keep" instance to "The Eye"
+-I don't know what possessed you to make that change but DON'T do it again, if there is an issue with this particular part then report it on the forums or jira
+------------------------------------------------------------------------
+r68749 | durcyn | 2008-04-09 09:02:36 -0400 (Wed, 09 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Professions/Professions.lua
+
+Cartographer: Professions: Oh, right.  Engineering is apparently a gathering profession now.
+------------------------------------------------------------------------
+r68747 | durcyn | 2008-04-09 08:49:10 -0400 (Wed, 09 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/libs
+
+Cartographer: Externals too.  This stuff's everywhere.
+------------------------------------------------------------------------
+r68746 | durcyn | 2008-04-09 08:47:31 -0400 (Wed, 09 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer.toc
+   M /trunk/Cartographer/Cartographer_Professions/Cartographer_Professions.toc
+   M /trunk/Cartographer/Cartographer_Professions/Professions.lua
+   M /trunk/Cartographer/Cartographer_ZoneInfo/Cartographer_ZoneInfo.toc
+   M /trunk/Cartographer/Cartographer_ZoneInfo/ZoneInfo.lua
+   M /trunk/Cartographer/embeds.xml
+
+Cartographer:  Professions/ZoneInfo:  kill Babble-Spell. die die die die die.
+------------------------------------------------------------------------
+r68400 | ckknight | 2008-04-07 01:31:14 -0400 (Mon, 07 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Foglight/Foglight.lua
+
+Cartographer_FogLight - fix a few errata locations
+------------------------------------------------------------------------
+r68238 | isler | 2008-04-06 02:16:26 -0400 (Sun, 06 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Data.lua
+   M /trunk/Cartographer/Cartographer_InstanceMaps/InstanceMaps.lua
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Scripts/pack.lua
+   M /trunk/Cartographer/Cartographer_InstanceNotes/notes.lua
+
+Cartographer: fix Tempest Keep
+------------------------------------------------------------------------
+r68203 | yleaf | 2008-04-05 21:38:01 -0400 (Sat, 05 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_InstanceNotes/module.lua
+
+Cartographer: Fixed locale problem in InstanceNotes. InstanceLoot is available now. Thanks glacier.
+------------------------------------------------------------------------
+r68149 | adirelle | 2008-04-05 10:53:03 -0400 (Sat, 05 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer.toc
+
+Cartographer: updated X-Embeds accordingly to the externals.
+------------------------------------------------------------------------
+r68147 | yleaf | 2008-04-05 10:40:57 -0400 (Sat, 05 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Professions/Professions.lua
+
+Cartographer: zhCN update
+------------------------------------------------------------------------
+r67893 | ananhaid | 2008-04-03 11:11:16 -0400 (Thu, 03 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Cartographer/Cartographer_InstanceLoot/InstanceLoot.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/CorpsePoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/NotePoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/Waypoints.lua
+
+Cartographer: 
+- zhCN update.
+------------------------------------------------------------------------
+r67804 | isler | 2008-04-03 01:32:55 -0400 (Thu, 03 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Foglight/Foglight.lua
+
+Cartographer: 
+ - Sunwell added
+------------------------------------------------------------------------
+r67263 | ananhaid | 2008-03-31 06:35:38 -0400 (Mon, 31 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/Cartographer/Cartographer.lua
+   M /trunk/Cartographer/Cartographer.toc
+   M /trunk/Cartographer/Cartographer_Battlegrounds/Battlegrounds.lua
+   M /trunk/Cartographer/Cartographer_Battlegrounds/Cartographer_Battlegrounds.toc
+   M /trunk/Cartographer/Cartographer_Coordinates/Cartographer_Coordinates.toc
+   M /trunk/Cartographer/Cartographer_Coordinates/Coordinates.lua
+   M /trunk/Cartographer/Cartographer_Foglight/Cartographer_Foglight.toc
+   M /trunk/Cartographer/Cartographer_Foglight/Foglight.lua
+   M /trunk/Cartographer/Cartographer_GroupColors/Cartographer_GroupColors.toc
+   M /trunk/Cartographer/Cartographer_GroupColors/GroupColors.lua
+   M /trunk/Cartographer/Cartographer_GuildPositions/Cartographer_GuildPositions.toc
+   M /trunk/Cartographer/Cartographer_GuildPositions/GuildPositions.lua
+   M /trunk/Cartographer/Cartographer_InstanceLoot/Cartographer_InstanceLoot.toc
+   M /trunk/Cartographer/Cartographer_InstanceLoot/InstanceLoot.lua
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Cartographer_InstanceMaps.toc
+   M /trunk/Cartographer/Cartographer_InstanceMaps/InstanceMaps.lua
+   M /trunk/Cartographer/Cartographer_InstanceNotes/Cartographer_InstanceNotes.toc
+   M /trunk/Cartographer/Cartographer_InstanceNotes/zhCN.lua
+   M /trunk/Cartographer/Cartographer_LookNFeel/Cartographer_LookNFeel.toc
+   M /trunk/Cartographer/Cartographer_LookNFeel/LookNFeel.lua
+   M /trunk/Cartographer/Cartographer_Notes/Cartographer_Notes.toc
+   M /trunk/Cartographer/Cartographer_Notes/Notes.lua
+   M /trunk/Cartographer/Cartographer_POI/Cartographer_POI.toc
+   M /trunk/Cartographer/Cartographer_POI/POI.lua
+   M /trunk/Cartographer/Cartographer_Professions/Cartographer_Professions.toc
+   M /trunk/Cartographer/Cartographer_Professions/Professions.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/Cartographer_Waypoints.toc
+   M /trunk/Cartographer/Cartographer_Waypoints/CorpsePoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/GuildPoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/NotePoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/PartyPoint.lua
+   M /trunk/Cartographer/Cartographer_Waypoints/Waypoints.lua
+   M /trunk/Cartographer/Cartographer_ZoneInfo/Cartographer_ZoneInfo.toc
+   M /trunk/Cartographer/Cartographer_ZoneInfo/ZoneInfo.lua
+
+Cartographer: 
+- zhCN update.
+------------------------------------------------------------------------
+r67233 | arrowmaster | 2008-03-31 04:24:03 -0400 (Mon, 31 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_InstanceLoot/InstanceLoot.lua
+   M /trunk/Cartographer/Cartographer_InstanceNotes/module.lua
+
+Cartographer: actually do the Babble-2.2 to LibBabble-Boss-3.0 conversion this time
+------------------------------------------------------------------------
+r67232 | arrowmaster | 2008-03-31 04:05:40 -0400 (Mon, 31 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Battlegrounds/Cartographer_Battlegrounds.toc
+   M /trunk/Cartographer/Cartographer_Coordinates/Cartographer_Coordinates.toc
+   M /trunk/Cartographer/Cartographer_Foglight/Cartographer_Foglight.toc
+   M /trunk/Cartographer/Cartographer_GroupColors/Cartographer_GroupColors.toc
+   M /trunk/Cartographer/Cartographer_GuildPositions/Cartographer_GuildPositions.toc
+   M /trunk/Cartographer/Cartographer_InstanceLoot/Cartographer_InstanceLoot.toc
+   M /trunk/Cartographer/Cartographer_InstanceLoot/InstanceLoot.lua
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Cartographer_InstanceMaps.toc
+   M /trunk/Cartographer/Cartographer_InstanceNotes/Cartographer_InstanceNotes.toc
+   M /trunk/Cartographer/Cartographer_InstanceNotes/module.lua
+   M /trunk/Cartographer/Cartographer_LookNFeel/Cartographer_LookNFeel.toc
+   M /trunk/Cartographer/Cartographer_Notes/Cartographer_Notes.toc
+   M /trunk/Cartographer/Cartographer_POI/Cartographer_POI.toc
+   M /trunk/Cartographer/Cartographer_Professions/Cartographer_Professions.toc
+   M /trunk/Cartographer/Cartographer_Waypoints/Cartographer_Waypoints.toc
+   M /trunk/Cartographer/Cartographer_ZoneInfo/Cartographer_ZoneInfo.toc
+   M /trunk/Cartographer/embeds.xml
+   M /trunk/Cartographer/libs
+
+Cartographer: final Babble-2.2 to LibBabble-*-3.0 upgrade, and cleaned up all the submodule tocs to not OptDep older unused libraries
+------------------------------------------------------------------------
+r66697 | ckknight | 2008-03-28 11:19:12 -0400 (Fri, 28 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_LookNFeel/LookNFeel.lua
+
+Cartographer_LookNFeel - recheck the WorldMapDetailFrame in case any external addons add frames to it.
+------------------------------------------------------------------------
+r66680 | aviana | 2008-03-28 08:58:29 -0400 (Fri, 28 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_InstanceNotes/notes.lua
+
+Cartographer_InstanceNotes: - Forgot one boss.. duh
+------------------------------------------------------------------------
+r66679 | aviana | 2008-03-28 08:46:56 -0400 (Fri, 28 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_InstanceNotes/notes.lua
+
+Cartographer_InstanceNotes: - Added notes for Magister's Terrace
+------------------------------------------------------------------------
+r65996 | arrowmaster | 2008-03-26 04:16:15 -0400 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Data.lua
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Scripts/pack.lua
+
+Cartographer: InstanceMaps: regenerated maps for 2.4 and added Magisters' Terrace, Sunwell is being difficult right now, oh and the Naxxramas map has majicly fixed itself
+------------------------------------------------------------------------
+r65599 | seerah | 2008-03-24 23:24:48 -0400 (Mon, 24 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer.toc
+   M /trunk/Cartographer/Cartographer_Battlegrounds/Cartographer_Battlegrounds.toc
+   M /trunk/Cartographer/Cartographer_Coordinates/Cartographer_Coordinates.toc
+   M /trunk/Cartographer/Cartographer_Foglight/Cartographer_Foglight.toc
+   M /trunk/Cartographer/Cartographer_GroupColors/Cartographer_GroupColors.toc
+   M /trunk/Cartographer/Cartographer_GuildPositions/Cartographer_GuildPositions.toc
+   M /trunk/Cartographer/Cartographer_InstanceLoot/Cartographer_InstanceLoot.toc
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Cartographer_InstanceMaps.toc
+   M /trunk/Cartographer/Cartographer_InstanceNotes/Cartographer_InstanceNotes.toc
+   M /trunk/Cartographer/Cartographer_LookNFeel/Cartographer_LookNFeel.toc
+   M /trunk/Cartographer/Cartographer_Notes/Cartographer_Notes.toc
+   M /trunk/Cartographer/Cartographer_POI/Cartographer_POI.toc
+   M /trunk/Cartographer/Cartographer_Professions/Cartographer_Professions.toc
+   M /trunk/Cartographer/Cartographer_Waypoints/Cartographer_Waypoints.toc
+   M /trunk/Cartographer/Cartographer_ZoneInfo/Cartographer_ZoneInfo.toc
+
+Cartographer: toc bumpage, per ck
+------------------------------------------------------------------------

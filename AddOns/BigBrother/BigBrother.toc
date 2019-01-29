@@ -1,0 +1,22 @@
+## Interface: 20400
+## Title: Big Brother
+## Notes: Checks Raid Buffs/Flasks & Alerts who breaks Polymorph/Shackle
+## Notes-frFR: Vérifie la présence de flacons/buffs de raid & Préviens quand quelqu'un casse une métamorphose/une entrave.
+## Notes-zhCN: 插件团队增益及合剂效果，并对打破变形/亡灵束缚进行报警
+## Notes-zhTW: 檢查團隊 增益/精煉，並警報誰破壞了 變形術/束縛不死生物
+## Author: Cryect, Treibh
+## X-Category: Raid
+## OptionalDeps: Ace2, RosterLib, SpecialEventsEmbed, SpecialEvents-Aura-2.0, FuBarPlugin-2.0
+## X-Embeds: Ace2, RosterLib, SpecialEventsEmbed, SpecialEvents-Aura-2.0, FuBarPlugin-2.0
+## SavedVariables: BigBrotherDB
+embeds.xml
+
+localization_enUS.lua
+localization_koKR.lua
+localization_deDE.lua
+localization_frFR.lua
+localization_zhTW.lua
+localization_zhCN.lua
+
+BigBrother.lua
+BuffWindow.lua

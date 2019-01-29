@@ -1,0 +1,30 @@
+﻿## Interface: 20400
+## Title: Cartographer |r[|cffeda55fProfessions|r]
+## Title-ruRU: Картограф |r[|cffeda55fПрофессии|r]
+## X-Name: Professions
+## X-Name-ruRU: Профессии
+## X-Name-deDE: Berufe
+## X-Name-frFR: Métiers
+## X-Name-koKR: 전문 기술
+## X-Name-zhTW: 專業技能
+## X-Name-esES: Profesiones
+## X-Name-zhCN: 专业技能
+## X-ModuleName: Professions
+## Notes: Stub for loading Cartographer module addons based on your professions.
+## Notes-ruRU: Заглушка для загрузки аддонов модуля Картографа основанных на ваших профессиях
+## Notes-deDE: Cartographer-Module in Abhängigkeit von Deinen Berufen laden.
+## Notes-frFR: Charge des modules pour Cartographer basés sur vos métiers.
+## Notes-koKR: 당신의 직업에 기초를 둔 Cartographer 모듈 애드온을 불려옵니다.
+## Notes-zhTW: 依據你的專業技能載入 Cartographer 模組。
+## Notes-esES: Carga los módulos del accesorio Cartographer basados en tus profesiones
+## Notes-zhCN: 根据你的专业技能加载 Cartographer 模块。
+## Author: Chris "kergoth" Larson
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer, Cartographer_Notes
+## X-Category: Map
+## X-eMail: clarson@kergoth.com
+## X-License: GPL v2 or later
+## Version: 2.0
+
+Professions.lua

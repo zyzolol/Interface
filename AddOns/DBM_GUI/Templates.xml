@@ -1,0 +1,211 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+	<Frame name="DMBossModDropDownFrame" inherits="UIDropDownMenuTemplate" id="1" hidden="true">
+		<Anchors>
+			<Anchor point="TOPLEFT"/>
+		</Anchors>
+	</Frame>
+	<Frame name="DMBLoadModDropDownFrame" inherits="UIDropDownMenuTemplate" id="2" hidden="true">
+		<Anchors>
+			<Anchor point="TOPLEFT"/>
+		</Anchors>
+	</Frame>
+
+	<Button name="DBMBossModFrameTabTemplate" inherits="CharacterFrameTabButtonTemplate" virtual="true">
+		<Scripts>
+			<OnClick>
+				PanelTemplates_Tab_OnClick(DBMBossModFrame);
+				DBMBossModFrame.selectedBossMod = 0;
+				DBMBossModFrame.showPage = 1;
+				DBMBossModFrame_OnShow();
+			</OnClick>
+			<OnEnter>
+--[[			if(    getglobal("DBMGUI_FRAMETAB_"..this:GetID().."_TT") ~= nil 
+				   and getglobal("DBMGUI_FRAMETAB_"..this:GetID().."_TD") ~= nil ) then
+
+					GameTooltip_AddNewbieTip(getglobal("DBMGUI_FRAMETAB_"..this:GetID().."_TT"), 1.0, 1.0, 1.0, getglobal("DBMGUI_FRAMETAB_"..this:GetID().."_TD"), 1);
+				end]]
+			</OnEnter>
+			<OnLeave>
+--				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Button>
+
+	<Button name="DBMOptionsFrameTabTemplate" inherits="CharacterFrameTabButtonTemplate" virtual="true">
+		<Scripts>
+			<OnClick>
+				PanelTemplates_Tab_OnClick(DBMOptionsFrame);
+				DBMOptionsFrame_OnShow();
+				HideUIPanel(DBMOptionsFrame); -- to fix a really strange bug with the sliders, they are really strange since 2.3! There are strange bugs like a call OnValueChanged even before the OnLoad handler is executed if the slider is defined in xml and has a min value != 0 (could be fixed on live realm, I didn't test it)
+				ShowUIPanel(DBMOptionsFrame);
+			</OnClick>
+		</Scripts>
+	</Button>
+	
+
+	<Button name="DBMBossModFrameButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="298" y="30"/>
+		</Size>
+		<Frames>
+			<Frame name="$parentButtonText" setAllPoints="true">
+				<Layers>
+					<Layer level="BORDER">
+						<FontString name="$parentBossMod" inherits="GameFontNormal">
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-3"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentAuthor" inherits="GameFontDisableSmall">
+							<Anchors>
+								<Anchor point="TOPRIGHT">
+									<Offset>
+										<AbsDimension x="-10" y="-3"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentDescription" inherits="GameFontHighlightSmall" justifyH="LEFT">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="$parentBossMod" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+			</OnLoad>
+			<OnClick>
+				HideDropDownMenu(1);
+				DBMBossModButton_OnClick(arg1);
+				PlaySound("igMainMenuOptionCheckBoxOn");
+			</OnClick>
+			<OnEnter>
+				GameTooltip_AddNewbieTip( getglobal(this:GetName().."TTText"), 1.0, 1.0, 1.0, getglobal(this:GetName().."TTDesc"), 1);
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
+	</Button>
+
+	<EditBox name="DBMBossModFrameEditBoxTemplate" virtual="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentLeft" file="Interface\ChatFrame\UI-ChatInputBorder-Left">
+					<Size>
+						<AbsDimension x="32" y="32"/> 
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT">
+							<Offset>
+								<AbsDimension x="-14" y="0"/> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0" right="0.125" top="0" bottom="1.0"/>
+				</Texture>
+				<Texture name="$parentRight" file="Interface\ChatFrame\UI-ChatInputBorder-Right">
+					<Size>
+						<AbsDimension x="32" y="32"/> 
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset>
+								<AbsDimension x="6" y="0" /> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.875" right="1.0" top="0" bottom="1.0"/>
+				</Texture>
+				<Texture name="$parentMiddle" file="Interface\ChatFrame\UI-ChatInputBorder-Right">
+					<Size>
+						<AbsDimension x="1" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="RIGHT" relativeTo="$parentRight" relativePoint="LEFT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0" right="0.9375" top="0" bottom="1.0"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<FontString inherits="ChatFontNormal"></FontString>
+	</EditBox>
+
+	<Slider name="DBMSliderTemplate" virtual="true" enableMouse="true" orientation="HORIZONTAL">
+		<Size>
+			<AbsDimension x="190" y="20"/>
+		</Size>
+		<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="3" right="3" top="6" bottom="6" />
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="8" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="8" />
+			</EdgeSize>
+		</Backdrop>
+		<ThumbTexture name="$parentThumb" file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+			<Size>
+				<AbsDimension x="32" y="32" />
+			</Size>
+		</ThumbTexture>
+		<Layers>
+			<Layer>
+				<FontString name="$parentTitle" inherits="GameFontNormalSmall" text="Title Text">
+					<Anchors>
+						<Anchor point="RIGHT" relativePoint="LEFT">
+							<Offset>
+								<AbsDimension x="-10" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<FontHeight>
+						<AbsValue val="10" />
+					</FontHeight>
+				</FontString>
+				<FontString name="$parentValue" inherits="GameFontNormalSmall" text="Value Text">
+							<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="10" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<FontHeight>
+						<AbsValue val="10" />
+					</FontHeight>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Slider>
+
+
+</Ui>
+
+

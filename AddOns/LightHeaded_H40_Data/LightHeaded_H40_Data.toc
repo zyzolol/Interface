@@ -1,0 +1,7 @@
+## Interface: 20300
+## Title: LightHeaded_H40_Data
+## Notes: Contains quest comments from http://www.wowhead.com for Horde players levels 21-40
+## RequiredDeps: LightHeaded
+## LoadOnDemand: 1
+
+..\LightHeaded\Data\LH_HordeQuests_40.lua

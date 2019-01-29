@@ -1,0 +1,11 @@
+## Interface: 20400
+## Title: Icicle
+## Notes: Adds enemy cooldowns to their nameplate
+## SavedVariables: Icicledb
+## Author: Thoth, Trolollolol - Sargeras - Molten-wow.com
+
+Icicle.xml
+settings.lua
+Icicle.lua
+IcicleCds.lua
+sponsors.lua

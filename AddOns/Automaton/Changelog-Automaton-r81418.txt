@@ -1,0 +1,17 @@
+------------------------------------------------------------------------
+r81418 | thrillseeker | 2008-09-05 15:55:23 -0400 (Fri, 05 Sep 2008) | 5 lines
+Changed paths:
+   M /trunk/Automaton/modules/Gossip/GossipData.lua
+
+Automaton: Gossip Module:
+I deactiveted the auto-TurnIn of "Mark of Honor's"
+because WotLK is coming and I guess(...) most players
+will hoard those making it very unfortunate if they
+get turned in accidently.
+------------------------------------------------------------------------
+r81406 | adirelle | 2008-09-05 10:27:00 -0400 (Fri, 05 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/Automaton/modules/Plates.lua
+
+Automaton: fixed nameplate module for WotLK.
+------------------------------------------------------------------------

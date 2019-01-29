@@ -1,0 +1,21 @@
+
+A significant part of the KTM codebase is essentially a library: code that performs standard useful stuff that any mod might use. This code is in the \Framework folder and the \Services folder. Here's a brief rundown. 
+
+
+
+
+1) LoadFirst.lua
+
+As the name suggests, this file has to be loaded first in order for the mod to load correctly. This file allows the rest of the mod's lua files to be more portable. Look at the top of each lua file, and the first three lines all look similar to this (from Bosses.lua)
+
+	local me = { name = "boss"}
+	local mod = thismod
+	mod[me.name] = me
+
+<thismod>, a global variable, is defined at the top of LoadFirst.lua. In this way, the other lua files don't really know which mod they belong to - they have no references to the real value of <thismod>, which for this addon is the global value <klhtm>. 
+
+Therefore if you want to reuse this code, you can copy / paste most sections of the core components. Then just change the top of LoadFirst.lua and you have a new mod!
+
+
+2) Globals.lua
+

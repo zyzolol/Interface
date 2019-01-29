@@ -1,0 +1,11 @@
+## Interface: 20003
+## Title: SS Warsong Gulch
+## Notes: Warsong Gulch flag carrier names next to scores
+## DefaultState: enabled
+## SavedVariables: SSWSG_Config
+## Dependencies: SSLoader, SSBGLibrary
+## OptionalDeps: SSPVP
+## X-SSUIDep: 1
+## LoadOnDemand: 1
+..\..\FrameXML\Fonts.xml
+SSWSG.xml

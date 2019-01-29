@@ -1,0 +1,54 @@
+------------------------------------------------------------------------
+r291 | ssveller | 2008-10-05 14:09:35 +0000 (Sun, 05 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/ui/base.lua
+
+Renamed SetTextFontObject to SetNormalFontObject on >= 3.0
+------------------------------------------------------------------------
+r290 | ssveller | 2008-10-05 14:09:06 +0000 (Sun, 05 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/editmode.lua
+   M /trunk/matrix.lua
+
+Changed window to allow for 51-point talents only on >= 3.0
+------------------------------------------------------------------------
+r289 | ssveller | 2008-10-05 14:06:58 +0000 (Sun, 05 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/Libs
+
+Updated paths to Dewdrop and Gratuity libs externals
+------------------------------------------------------------------------
+r288 | nevcairiel | 2008-10-05 13:52:05 +0000 (Sun, 05 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Fix .pkgmeta
+------------------------------------------------------------------------
+r287 | root | 2008-09-30 16:14:13 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r286 | root | 2008-09-29 21:36:17 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+   M /trunk/Libs
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r284 | root | 2008-09-29 20:58:47 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/Talented
+   A /trunk (from /tmp/trunk/Talented:283)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r283 | jerry | 2008-08-25 10:29:57 +0000 (Mon, 25 Aug 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/Talented/tips.lua
+
+Talented:
+_ When Talented_Data is not available and viewing the current template, fall back to :SetTalent() to fill tooltip information.
+
+------------------------------------------------------------------------

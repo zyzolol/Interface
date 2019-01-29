@@ -1,0 +1,8 @@
+## Interface: 20300
+## Title: LightHeaded
+## Notes: Allows you to view WoWHead comments for quests in-game
+## SavedVariables: LightHeadedDB
+## OptionalDeps: Dongle
+
+Dongle.lua
+LightHeaded.lua

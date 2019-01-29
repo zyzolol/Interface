@@ -1,0 +1,11 @@
+## Title: SlideBar
+## Notes: Allows alternative placement of minimap icons into an expanding bar tab that sits on the side of the screen.
+##
+## Interface: 20400
+## LoadOnDemand: 0
+##
+## Version: 3.1.2 (<%codename%>)
+## Revision: $Id: SlideBar.toc 77 2008-03-25 03:29:42Z MentalPower $
+## URL: http://auctioneeraddon.com/dl/
+##
+Load.xml

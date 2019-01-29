@@ -1,0 +1,13 @@
+## Interface: 20400
+## Title: HeroStatus
+## Author: Waddell
+## Notes: Rewrite of HeroStatus a PVP addon for 2.4.3 Feenix servers. (Inspired by Talimar)
+
+## SavedVariables: HeroStatusVars
+## SavedVariablesPerCharacter: HeroStatusChars
+
+## DefaultState: enabled
+
+HeroStatusFunctions.lua
+HeroStatus.lua
+HeroStatus.xml

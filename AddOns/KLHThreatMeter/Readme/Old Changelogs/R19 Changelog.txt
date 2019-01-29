@@ -1,0 +1,367 @@
+19.19 (still in development)
+
+a)	Fix for Soulshatter multiple activation.
+
+b) 	Toc update for 2.1
+b)	French localisation update (thanks Tinou)
+b)	Spanish complete Localisation update (thanks Kyopaxa)
+b)	Insignifigance debuff from Gurtogg Bloodboil (thanks koaschten)
+
+
+19.18
+
+--> Added a boss mod for Leotheras. (\Bosses\KTM_Leotheras.lua)
+
+--> Recoded Sunder Armor tracker to match the target better. (\Abilities\KTM_SpecialAbility.lua.)
+
+--> Added Shadowguard 0 threat.
+
+--> Added Faerie Fire (Feral). The sunder file now longer exists, it has become  
+
+--> localisation update for French, Spanish, German.
+
+--> 2.1 compatibility (will work on 2.0.10 and 2.1.x) stuff:
+	mangle (educated guess)
+	revenge (educated guess)
+	binding heal (guess)
+	leader of the pack
+	(not subtlety yes)
+
+--> Added Vampiric Touch threat. Reported threat for Shadow Priests in a full mana group should be 10-15% higher.
+
+--> Fixed up resetraid keybinding.
+
+
+19.17
+
+--> Reanchored the raid table to UIParent. This should FIX problems with scaling, window position, alt+z stuff. You might need to run "/ktm g r" again if your window is missing. As a side effect, you should now transmit threat updates while in alt-z mode.
+
+--> Added the "SIMPLEPERFORMSELFOTHER" constant to parsers for "You perform %s on %s." It was previously on SPELLPERFORMGOSELFTARGETTED, which is probably the same for most localisations, but might have caused problems.
+
+--> Improved the accuracy of Taunt and related abilities by analysing the target's recent autoattacks.
+
+--> Fixed a problem where the blood craze ability was interpreted as feign death for orc hunters. Feign Death stuff is now in its own file in the \Abilities subfolder, with added documentation. 
+
+--> Fixed a problem with Invisibility, where KTM would keep reducing your threat if you lost invisibility before you had completely faded. Misdirection and Invisibility are now in separate files in the \Abilities subfolder. Added some more documentation to these to explain the implementation. 
+
+
+--> It's now possible for other addons to load a module into KTM by calling 
+
+	klhtm.load.lateloadmodule(mymodule) 
+
+where <mymodule> is a table. Example usage is
+
+	if klhtm and klhtm.loader and klhtm.loader.isloaded then
+
+		local success, errormessage = klhtm.loader.lateloadmodule(mymodule)
+
+		if success == false then
+			ChatFrame1:AddMessage(errormessage)
+		end
+	end
+
+<mymodule> must have a key "name" whose value doesn't match the name of an existing module in KTM. 
+
+Adding a module to KTM gives you access to its internal services. For example you could borrow its parsing engine like so:
+
+	local mymodule = 
+	{
+		name = "myparser",
+	
+		myparsers = 
+		{
+			{ "fatcrit", "COMBATHITCRITSELFOTHER", "CHAT_MSG_COMBAT_SELF_HITS" },
+		},
+	
+		onparse = function(identifier, target, damage)
+		
+			if identifier == "fatcrit" then
+				ChatFrame1:AddMessage(target .. " was owned for " .. damage .. "!")
+			end
+		end,
+	}
+
+	klhtm.loader.lateloadmodule(mymodule)
+
+
+Or here's an example that hooks misdirection threat notifications:
+
+	local mymodule = 
+	{
+		name = "mymisdirection",
+		mynetmessages = { "misdirection" },
+	
+
+		onnetmessage = function(author, command, data)
+
+			local _, _, player, value = string.find(data, "(.+) (%d+)")
+			ChatFrame1:AddMessage(author .. " misdirects " .. value .. " threat to " .. player)
+		end,
+	}
+	
+	klhtm.loader.lateloadmodule(mymodule)		
+
+For more details, see the comments at the top of the files in the \Services and \Framework subfolders.
+
+
+19.16
+
+Threat Correctness:
+
+--> Hydross boss mod.
+
+
+BugFixes:
+
+--> Fixed broken key bindings and master target button.
+
+
+Internal:
+
+--> Changes to the Framework classes. Core.lua split into Loader.lua and Events.lua. Improved the way services interact with other modules to be more modular. Applications coming soon. 
+
+A fair few files have been moved around lately, it won't hurt to install the new version over your current directory, but if you don't like unused files sticking around delete you KLHThreatMeter directory first.
+
+
+19.15
+
+--> The console command help is now mostly localisable. Check the comments in KTM_Console.lua for more details.
+
+--> Added Anesthetic Poison (0 threat).
+
+--> Fixed a Lua error from 19.14 when healing pets.
+
+--> zhTW push.
+
+--> Added new ranks of a few spells.
+
+--> A few reset / set mastertarget bossmods for kara and mag. You'll need 2 people in the raid with 19.15 or higher for the resets to affect older versions of KTM.
+
+--> Reverted Thunderclap to 19.12 values.
+
+
+19.14
+
+--> Fixed an error with Torment rank 8.
+
+--> Fixed an error that could occur just after the pull in a group.
+
+--> Fixed up error logs a bit.
+
+--> Fixed some divide by zero problems with the %max column on the raid table.
+
+--> Couple things mentioned in 19.13 really came here.
+
+--> zhTW update. 
+
+
+19.13
+
+--> Added a scanner for Soulshatter, which might have been broken or not even there.
+
+--> Possible fix for VE problems.
+
+--> Little adjustment for Lacerate.
+
+--> Added on-site stacktrace to error logs.
+
+--> Fixed a spanish localisation problem preventing spell ranks being detected.
+
+--> Readded "Aggro Gain" bar. To change its behaviour, go to the "Rows and Columns" topic in the Raidtable help section. Non-tanks can see the "Aggro Gain" bar, and all players can optionally see a "Tank Regain" bar, which shows the safe point for DPS when the tank will suffer temporary threat wipes such as fears.
+
+--> Improved Voidwalker / Improved Succubus wasn't activating.
+
+--> Buffed threat for Anguish, Torment and Suffering. Thanks galmok for data.
+
+--> Added Thunder Clap threat scaling with talent points. This means 3/3 Imp Thunder clap is only +40% threat.
+
+
+
+19.12
+
+--> The text strings on the raid table are now unbounded, which should fix issues with massive TPS or long player names.
+
+--> old position string on the raid table header is now % mt threat, colour coded. Header will compact itself when there is no master target.
+
+--> 2.10 changes:
+
+	Fade 7 upped a bit.
+	Thunderfury (not confirmed, putting it down to 0 extra threat on dmg proc)
+	Thunder Clap threat = 1.75x damage
+	Silent Resolve no shadow spells (may still be applying to vampyric embrace heals)
+	
+	Bear Form + Feral Instinct down to 1.45	
+	Mangle threat = 1.5x damage
+	Lacerate: bleed threat = 0.2x damage, application threat = 262 + damage.
+
+--> Changed the way pet threat is added to the raid table, now network messages are injected, should reduce problems.
+
+
+--> With new research into Growl (thanks Kathucka and Dhirken), added level-based scaling of Growl threat, and also high-AP scaling.
+
+
+19.11
+
+--> More pet fixes
+
+--> Misdirection fix. It may even be working now!!!!!
+
+
+19.10
+
+--> Fixed an issue in Tables.lua:202, where an error would occur when determining the class of someone in your party before WoW knew what class they were. Would rarely occur just after joining a party or someone else joined the party.
+
+--> Fixed a couple issues with pets caused by 19.9. The desired behaviour is that other players will see the highest of your threat or your pet's threat under your name, while you will see your threat and your pet's threat.
+
+--> Buffed the "MyThreat" section of the help menu a bit.
+
+--> Fixed an error that would cause Misdirection not to fire.
+
+
+19.9
+
+--> Pets will now be coloured grey on the raid table.
+
+--> If your pet has more threat than you, you will broadcast your pet's threat to the raid.
+
+--> Buffed German localisation. Thanks lapicidae!
+
+--> Added a major framework component: error trapping and logging. KTM will for the most part handle its own error reporting. There's a new section "Error Log" in the help menu where you can view error reports, and easily copy and paste error reports to the discussion section on the webpage. 
+
+
+19.8
+
+--> Fixed a major omission in the new Regex system which would break most non-English versions.
+
+--> Buffed data.infermissingspellranks() which was leading to Lua errors in lower ranks of Maul.
+
+
+19.7
+
+--> Reinstated the personal threat table. It's now accessable from the help menu.
+
+--> Fixed another Lua error on Invisibility.
+
+--> Added Lacerate. Also got a new value for Maul, which was too low.
+
+--> Upgraded Spanish and Korean localisations. As a consequence, abilities will now respect their <.class> property in Combat.lua:me.spells
+
+
+
+19.6
+
+--> Added Anguish for Felguard.
+
+--> The "%Max" column should now display property when scaled down.
+
+--> Added a Miscellaneous section to the Raid Table options menu. In there i've reinstated the ability to lock the window in place, and there are autohide options.
+
+	Since autohide now has party / raid / none options, the old /ktm a method is gone.
+
+--> Fixed Soulshatter, now confirmed working.
+
+--> Fixed typo that would cause Invisibility to make a lua error.
+
+--> I know my credibility is a bit low on this, but this time i really did fix the Hide / Show keybinding.
+
+--> Other addons can now add a section to the helpmenu, with
+	
+	klhtm.helpmenu.lateregistersection("id", "parentid", "description", frame)
+
+See KTM_HelpMenu.lua:200 for more details.
+
+--> Saved Variables are now per-character. As a result all your current settings will be lost, sorry!
+
+
+19.5
+
+--> Updated threat values for warrior abilities.
+
+--> Fixed the Hide / Show keybinding.
+
+--> Found a bug in Spell Reporting that would not print out most spell effects.
+
+--> Changed the way network messages are processed. Each module now deals with the messages that concern it, while the NetIn module manages the details. Check out comments at the top of KTM_NetIn.lua for implementation details.
+
+--> Buffed the regex system too. A module can now specify not only a specific event to receive, but also a specific format string, e.g.
+
+	me.myparsers = { "whitedamage", "COMBATCRITSELFOTHER", "CHAT_MSG_SPELL_SELF_HITS" }
+
+	me.onparse = function(identifier, ...)
+
+		mod.print("Crit for " .. select(2, ...))
+
+	end
+
+--> Added Invisibility. Untested - may cause you to reset threat just after casting.
+
+--> Added Misdirection. Untested. Check the implementation for these two in KTM_Abilities.lua
+
+
+19.4
+
+--> Righteous Defense working now.
+
+--> Added Soul Shatter for Warlocks.
+
+--> Added new ranks of pet spells. This would cause Lua errors on casting previously.
+
+--> Fixed some bugs with autohide.
+
+--> Added Disengage for Hunters.
+
+--> Removed rage calculations from the mod. 
+
+--> Fixed Lua error from Druids casting Maul.
+
+
+
+19.3
+
+--> Added Spanish localisation. Thanks to piperhack and Geran!
+
+--> KLHTM_SavedVariables is no longer saved. There should no longer be any KLHTM_ variables in the global namespace, just "klhtm" and "klhtmsavedvariables". Oh, and a few annoying variables for key bindings and console commands i suppose. 
+
+--> Missed a few things that would cause errors referencing KLHTM_RequestRedraw - FIXED I THINK
+
+--> Added a transparency slider for the raid table ("colour" subsection)
+
+--> Some GUI options weren't updating as soon as they were changed - FIXED.
+
+--> Added a scale slider in the "layout" section of the raid table options. 
+
+--> Fixed a lua error on loadup.
+
+--> updated .toc.
+
+
+19.2
+
+--> Updated Bear and Warrior tanking abilities.
+
+--> Shaman Frost Shock and Earth shock are now the right way around, because of the 2.0.3 patch.
+
+--> Removed the original gui completely. This means no more XML at all! Also, the personal view is missing in this build... returning soon though!
+
+--> Autohide should be working. "/ktm g s" will show the raidtable if it gets lost.
+
+
+19.1
+
+--> Onyxia's Knock Away down to -25% from -33%.
+
+--> Fixed a printout error with /ktm b s
+
+--> Demo version of the new GUI. There's a new version of the raid window that's mostly done. 
+
+It should appear by default. If it's gone missing, open up the help menu (/ktm help), click on the "Raid Table" section, then click the "Show Raid Table" button.
+
+When the new raid table is shown, click the options button (3rd from the right) to bring up the configuration window. When it's officially released, it will be intergrated just like the current raid window, but until then both of them will be displayed.
+
+The new window is fairly customisable. You can change the colour scheme, layout, add class filters, and other mainly aesthetic changes.
+
+There's a new Threat Per Second (TPS) column you might find interesting.
+
+The help menu is going to be fleshed out significantly later. Eventually it will replace the command line interface (/ktm stuff). No XML was used in the making of the GUI.
+
+--> Note: the new raid window is movable, but only if you drag the central part (with the buttons and stuff, not the actual table part). Working on this.

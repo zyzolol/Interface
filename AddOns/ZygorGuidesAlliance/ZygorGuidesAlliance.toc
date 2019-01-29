@@ -1,0 +1,18 @@
+﻿## Interface: 20400
+## Notes: Zygor's 1-70 Leveling Guide - Alliance
+## Note-frFR: 
+## Notes-esES: 
+## Title: Zygor's Guides - Alliance
+## Author: Sinus Pi
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: ZygorGuidesViewer
+## X-Category: 
+## X-Credits: 
+## X-eMail: zygor@zygorguides.com
+## X-Website: http://zygorguides.com/
+## X-License: Commercial
+## Version: 1.0
+
+ZygorGuidesAlliance.lua
+ZygorGuidesAllianceMapnotes.lua

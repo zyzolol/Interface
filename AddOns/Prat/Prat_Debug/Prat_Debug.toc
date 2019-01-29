@@ -1,0 +1,13 @@
+﻿## Interface: 20400
+## Title: Prat |r[|cffeda55fDebug|r]
+## RequiredDeps: Prat
+## Author: Prat Development Team
+## X-License: GPLv2
+
+## LoadOnDemand: 1
+## LoadWith: Prat
+
+## DefaultState: enabled
+## SavedVariables: PratDebug
+
+includes.xml

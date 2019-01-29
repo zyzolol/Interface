@@ -1,0 +1,7 @@
+## Interface: 20300
+## Title: LightHeaded_Quest_Data
+## Notes: Allows LightHeaded to reference quests internally by qid
+## RequiredDeps: LightHeaded
+## LoadOnDemand: 1
+
+..\LightHeaded\Data\LH_QuestData.lua

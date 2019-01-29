@@ -1,0 +1,45 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<Script file="ExtendedPartyFrame.lua"/>
+	<Include file="ExtendedPartyFrameTemplates.xml"/>
+	<Button name="TargetofPartyFrame1" inherits="TargetofPartyFrameTemplate" parent="PartyMemberFrame1" toplevel="true" id="1">
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension y="-3"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Button>
+	<Button name="TargetofPartyFrame2" inherits="TargetofPartyFrameTemplate" parent="PartyMemberFrame2" toplevel="true" id="2">
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension y="-3"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Button>
+	<Button name="TargetofPartyFrame3" inherits="TargetofPartyFrameTemplate" parent="PartyMemberFrame3" toplevel="true" id="3">
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension y="-3"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Button>
+	<Button name="TargetofPartyFrame4" inherits="TargetofPartyFrameTemplate" parent="PartyMemberFrame4" toplevel="true" id="4">
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension y="-3"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+	</Button>
+	<StatusBar name="PartySpellBar1" inherits="PartySpellBarTemplate" parent="PartyMemberFrame1" toplevel="true" id="1"/>
+	<StatusBar name="PartySpellBar2" inherits="PartySpellBarTemplate" parent="PartyMemberFrame2" toplevel="true" id="2"/>
+	<StatusBar name="PartySpellBar3" inherits="PartySpellBarTemplate" parent="PartyMemberFrame3" toplevel="true" id="3"/>
+	<StatusBar name="PartySpellBar4" inherits="PartySpellBarTemplate" parent="PartyMemberFrame4" toplevel="true" id="4"/>
+</Ui>

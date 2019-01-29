@@ -1,0 +1,331 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+  http://wowprogramming.com/FrameXML/UI.xsd">
+  <Script file="HeroStatusFunctions.lua" />
+
+  <Frame name="HeroStatus_Frame" parent="UIParent" movable="true" enableMouse="true" frameStrata="MEDIUM">
+    <Size x="440" y="400"/>
+    <Anchors>
+      <Anchor point="CENTER" relativePoint="CENTER" relativeTo="UIParent"/>
+    </Anchors>
+    <Scripts>
+      <OnDragStart>
+        HeroStatus_Frame:StartMoving();
+        HeroStatus_Frame.isMoving = true;
+      </OnDragStart>
+      <OnDragStop>
+        HeroStatus_Frame:StopMovingOrSizing();
+        HeroStatus_Frame.isMoving = false;
+      </OnDragStop>
+    </Scripts>
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture name="$parentBG1" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopBackground">
+          <Size x="216" y="64"/>
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="5" y="-5"/>
+            </Anchor>
+          </Anchors>
+        </Texture>
+        <Texture name="$parentBG2" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopBackground">
+          <Size x="216" y="64"/>
+          <Anchors>
+            <Anchor point="LEFT" relativeTo="$parentBG1" relativePoint="RIGHT"/>
+          </Anchors>
+        </Texture>
+      </Layer>
+      <Layer level="ARTWORK">
+        <Texture name="$parentTopLeft" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopLeft">
+          <Anchors>
+            <Anchor point="TOPLEFT"/>
+          </Anchors>
+        </Texture>
+        <Texture name="$parentTopRight" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopRight">
+          <Size x="140" y="242"/>
+          <Anchors>
+            <Anchor point="TOPRIGHT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords left="0" right="0.546875" top="0" bottom="0.9453125"/>
+        </Texture>
+        <Texture file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-Top">
+          <Size x="0" y="242"/>
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parentTopLeft" relativePoint="TOPRIGHT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+            <Anchor point="TOPRIGHT" relativeTo="$parentTopRight" relativePoint="TOPLEFT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords left="0.3" right="0.35" top="0" bottom="0.9453125"/>
+        </Texture>
+        <Texture name="$parentBotLeft" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-BotLeft">
+          <Size x="128" y="168"/>
+          <Anchors>
+            <Anchor point="BOTTOMLEFT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords left="0" right="1" top="0" bottom="0.65625"/>
+        </Texture>
+        <Texture name="$parentBotRight" file="Interface\WorldStateframe\WorldStateFinalScoreFrame-BotRight">
+          <Size x="140" y="168"/>
+          <Anchors>
+            <Anchor point="BOTTOMRIGHT"/>
+          </Anchors>
+          <TexCoords left="0" right="0.546875" top="0" bottom="0.65625"/>
+        </Texture>
+        <Texture name="$parentBotMiddle" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-BotLeft">
+          <Size x="0" y="168"/>
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parentBotLeft" relativePoint="TOPRIGHT"/>
+            <Anchor point="TOPRIGHT" relativeTo="$parentBotRight" relativePoint="TOPLEFT"/>
+          </Anchors>
+          <TexCoords left="0.25" right="0.5" top="0" bottom="0.65625"/>
+        </Texture>
+        <Texture name="$parentMidLeft" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopLeft">
+          <Size x="128" y="10"/>
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parentTopLeft" relativePoint="BOTTOMLEFT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+            <Anchor point="BOTTOMLEFT" relativeTo="$parentBotLeft" relativePoint="TOPLEFT">
+              <Offset x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords left="0" right="1" top="0.9375" bottom="1"/>
+        </Texture>
+        <Texture name="$parentMidRight" file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopRight">
+          <Size x="140" y="10"/>
+          <Anchors>
+            <Anchor point="TOPRIGHT" relativeTo="$parentTopRight" relativePoint="BOTTOMRIGHT"/>
+            <Anchor point="BOTTOMRIGHT" relativeTo="$parentBotRight" relativePoint="TOPRIGHT"/>
+          </Anchors>
+          <TexCoords left="0" right="0.546875" top="0.9375" bottom="1"/>
+        </Texture>
+        <Texture file="Interface\WorldStateFrame\WorldStateFinalScoreFrame-TopLeft">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parentMidLeft" relativePoint="TOPRIGHT"/>
+            <Anchor point="BOTTOMRIGHT" relativeTo="$parentMidRight" relativePoint="BOTTOMLEFT"/>
+          </Anchors>
+          <TexCoords left="0.25" right="0.5" top="0.25" bottom="0.5"/>
+        </Texture>
+        <FontString name="$parentTitle" inherits="GameFontNormal" text="HeroStatus">
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset x="0" y="-7"/>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentDemo" inherits="GameFontNormalSmall" text="">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="20" y="-35" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentVersion" inherits="GameFontNormalSmall" text="version">
+          <Anchors>
+            <Anchor point="TOPRIGHT">
+              <Offset x="-10" y="-35" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentEnabled" inherits="GameFontNormalSmall" text="HeroStatus enabled">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="50" y="-73" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentGuild" inherits="GameFontNormalSmall" text="Say Sapped!!! when a rogue saps you">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="70" y="-98" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentHonor" inherits="GameFontNormalSmall" text="Alert on honor amount">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="70" y="-123" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentKB" inherits="GameFontNormalSmall" text="Alert on killing blow">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="70" y="-148" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentSounds" inherits="GameFontNormalSmall" text="Enable killing blow sounds">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="90" y="-173" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentAFK" inherits="GameFontNormalSmall" text="Report AFKers in battlegrounds">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="70" y="-198" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentAFKSilent" inherits="GameFontNormalSmall" text="Report player silently">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="90" y="-223" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentHealIcon" inherits="GameFontNormalSmall" text="Display icon over healers in battlegrounds">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="70" y="-248" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <!--
+		<FontString name="$parentHealIcon" inherits="GameFontNormalSmall" text="Enable battleground que watcher">
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset x="70" y="-273" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+		-->
+        <FontString name="$parentToday" inherits="GameFontNormalSmall" text="You have X honor kills today">
+          <Anchors>
+            <Anchor point="BOTTOMLEFT">
+              <Offset x="15" y="5" />
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Frames>
+      <Button name="HS_Button_Close" inherits="UIPanelCloseButton">
+        <Anchors>
+          <Anchor point="TOPRIGHT">
+            <Offset x="5" y="4"/>
+          </Anchor>
+        </Anchors>
+      </Button>
+      <Button name="HS_Button_Save" inherits="OptionsButtonTemplate" text="Save">
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT">
+            <Offset x="-2" y="4"/>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            HeroStatus_OnClickSave();
+          </OnClick>
+        </Scripts>
+      </Button>
+      <CheckButton name="HS_Button_Enabled" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset><AbsDimension x="20" y="-65"/></Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            HeroStatus_OnClickCheckButton();
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HS_Button_Sap" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset><AbsDimension x="40" y="-90"/></Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            HeroStatus_OnClickCheckButton();
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HS_Button_Honor" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset><AbsDimension x="40" y="-115"/></Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+	  <EditBox name="HS_Honor_Amount" letters="5" inherits="InputBoxTemplate">
+        <Size>
+          <AbsDimension x="40" y="38" />
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset x="200" y="-111" />
+          </Anchor>
+        </Anchors>
+        <FontString inherits="ChatFontNormal"></FontString>
+      </EditBox>
+      <CheckButton name="HS_Button_KB" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset><AbsDimension x="40" y="-140"/></Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            HeroStatus_OnClickCheckButton();
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HS_Button_Sounds" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset><AbsDimension x="60" y="-165"/></Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="HS_Button_AFK" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset><AbsDimension x="40" y="-190"/></Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            HeroStatus_OnClickCheckButton();
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HS_Button_AFK_Silent" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset><AbsDimension x="60" y="-215"/></Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="HS_Button_Heal_Icon" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset><AbsDimension x="40" y="-240"/></Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+      <!--
+	  <CheckButton name="HS_Button_Que_Watcher" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset><AbsDimension x="40" y="-264"/></Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+	  -->
+    </Frames>
+  </Frame>
+</Ui>
+

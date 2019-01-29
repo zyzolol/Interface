@@ -1,0 +1,6 @@
+## Interface: 20003
+## Title: SSLoader
+## Notes: Loader for SS load on demand addons
+## DefaultState: enabled
+## SavedVariables: SSLoader_AddOns
+SSLoader.xml

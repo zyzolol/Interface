@@ -1,0 +1,11 @@
+## Interface: 20003
+## Title: SS Arathi Basin
+## Notes: Arathi Basin capture timers
+## DefaultState: enabled
+## Dependencies: SSLoader, SSBGLibrary
+## OptionalDeps: SSPVP
+## X-SSUIDep: 1
+## LoadOnDemand: 1
+## SavedVariables: SSAB_Config
+..\..\FrameXML\Fonts.xml
+SSAB.xml

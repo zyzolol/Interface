@@ -1,0 +1,99 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+	<Script file="localization.lua"/>
+	<Script file="localization.de.lua"/>
+	<Script file="localization.fr.lua"/>
+	<Script file="SSOverlay.lua"/>
+
+	<Frame name="SSOverlay_Loader">
+		<Scripts>
+			<OnLoad>
+				SSOverlay_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				SSOverlay_OnEvent( event );
+			</OnEvent>
+		</Scripts>
+	</Frame>
+
+	<Frame name="SSOverlayRow" frameStrata="LOW" enableMouse="true" virtual="true">
+		<Size>
+			<AbsDimension x="250" y="13"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString name="$parentText" inherits="GameFontNormalSmall" justifyH="left">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
+	
+	<Frame name="SSOverlay" frameStrata="LOW" movable="true" resizable="true" enableMouse="true" hidden="true" parent="UIParent" ClampedToScreen="true">
+		<Size>
+			<AbsDimension x="250" y="250"/>
+		</Size>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="9"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="9"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="2" right="2" top="2" bottom="2"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Frames>
+			<Button name="SSOverlayResizeWindow">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<AbsDimension x="-1" y="-1"/>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseDown>
+						if( not SSOverlay_Config.locked ) then
+							SSOverlay:StartSizing()
+						end
+					</OnMouseDown>
+					<OnMouseUp>
+						SSOverlay:StopMovingOrSizing()
+					</OnMouseUp>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnMouseUp>
+				if( this.isMoving ) then
+					SSOverlay_SavePosition();
+					this:StopMovingOrSizing();
+					this.isMoving = false;
+				end
+			</OnMouseUp>
+			<OnMouseDown>
+				if( not SSOverlay_Config.locked and arg1 == "LeftButton" ) then
+					this:StartMoving();
+					this.isMoving = true;
+				end
+			</OnMouseDown>
+			<OnShow>
+				SSOverlay_UpdateOverlayColors();
+			</OnShow>
+			<OnUpdate>
+				SSOverlay_OnUpdate( arg1 );
+			</OnUpdate>
+			<OnLoad>
+				this:RegisterForDrag( "LeftButton" );
+			</OnLoad>
+		</Scripts>					
+	</Frame>
+</Ui>

@@ -1,0 +1,7 @@
+## Interface: 20400
+## Title: SpellReplay (TrufiGCD)
+## Author: Oldsalt (Smolderforge)
+## Notes: Displays the spells you just casted
+## DefaultState: enabled
+## SavedVariablesPerCharacter: replaySavedSettings, displayToPartyTable
+SpellReplay.lua

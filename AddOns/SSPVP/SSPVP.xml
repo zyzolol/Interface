@@ -1,0 +1,136 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+	<Script file="localization.lua"/>
+	<Script file="localization.de.lua"/>
+	<Script file="localization.fr.lua"/>
+	<Script file="SSPVP.lua"/>
+	<Script file="SSPVP_Overlay.lua"/>
+
+	<Frame name="SSPVP">
+		<Scripts>
+			<OnLoad>
+				SSPVP_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				SSPVP_OnEvent( event );
+			</OnEvent>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="SSPVP_Overlay">
+		<Scripts>
+			<OnLoad>
+				SSPVPO_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				SSPVPO_OnEvent( event );
+			</OnEvent>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="SSAlwaysUpDrag" parent="WorldStateAlwaysUpFrame" movable="true" ClampedToScreen="true" hidden="true">
+		<Size>
+			<AbsDimension x="50" y="50"/>
+		</Size>	
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="9"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="9"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="2" right="2" top="2" bottom="2"/>
+			</BackgroundInsets>
+		</Backdrop>
+		
+		<Scripts>
+			<OnLoad>
+				this:SetBackdropColor( 0, 0, 0, 0.75 );
+				this:SetBackdropBorderColor( 0.75, 0.75, 0.75, 1 );
+			</OnLoad>
+			<OnEnter>
+				GameTooltip:SetOwner( this, "ANCHOR_BOTTOMLEFT" );
+				GameTooltip:SetText( SS_ALWAYSDRAG, nil, nil, nil, nil, true );
+				GameTooltip:Show();
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnMouseDown>
+				SSPVP_StartAlwaysUpDragger();
+				GameTooltip:Hide();
+			</OnMouseDown>
+			<OnMouseUp>
+				SSPVP_StopAlwaysUpDragger();
+			</OnMouseUp>
+		</Scripts>
+	</Frame>
+
+	<Button name="SSPVPAllianceInfoButton" parent="WorldStateScoreFrame" inherits="GameMenuButtonTemplate" text="SS_ALLIANCE">
+		<Size>
+			<AbsDimension x="50" y="19"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPRIGHT" relativeTo="WorldStateScoreFrame" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension x="-190" y="-18"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Scripts>
+			<OnEnter>
+				this.tooltip = SSPVP_UpdateScoreInfo( "Alliance" );
+				
+				GameTooltip:SetOwner( this, "ANCHOR_BOTTOMLEFT" );
+				GameTooltip:SetText( this.tooltip, nil, nil, nil, nil, 1 );
+				GameTooltip:Show();
+			</OnEnter>
+			<OnMouseUp>
+				if( arg1 == "RightButton" ) then
+					SSPVP_PrintBalanceToChat( "Alliance" );
+				end
+			</OnMouseUp>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+		
+		<NormalFont inherits="GameFontHighlightSmall"/>
+		<HighlightFont inherits="GameFontHighlightSmall"/>
+		<DisabledFont inherits="GameFontDisableSmall"/>
+	</Button>
+
+	<Button name="SSPVPHordeInfoButton" parent="WorldStateScoreFrame" inherits="GameMenuButtonTemplate" text="SS_HORDE">
+		<Size>
+			<AbsDimension x="40" y="19"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPRIGHT" relativeTo="WorldStateScoreFrame" relativePoint="TOPRIGHT">
+				<Offset>
+					<AbsDimension x="-140" y="-18"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Scripts>
+			<OnEnter>
+				this.tooltip = SSPVP_UpdateScoreInfo( "Horde" );
+				
+				GameTooltip:SetOwner( this, "ANCHOR_BOTTOMLEFT" );
+				GameTooltip:SetText( this.tooltip, nil, nil, nil, nil, 1 );
+				GameTooltip:Show();
+			</OnEnter>
+			<OnMouseUp>
+				if( arg1 == "RightButton" ) then
+					SSPVP_PrintBalanceToChat( "Horde" );
+				end
+			</OnMouseUp>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+		
+		<NormalFont inherits="GameFontHighlightSmall"/>
+		<HighlightFont inherits="GameFontHighlightSmall"/>
+		<DisabledFont inherits="GameFontDisableSmall"/>
+	</Button>
+</Ui>

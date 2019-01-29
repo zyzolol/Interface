@@ -1,0 +1,8 @@
+## Interface: 20400
+## Title: EnergyWatch v2
+## Notes: Displays energy ticks and combo points on a progress bar
+## Author: Repent (2.0 by OneWingedAngel) Original author: Vector-
+## SavedVariables: EnergyWatch_Save
+## OptionalDeps:
+## Dependencies: 
+EnergyWatch_v2.xml

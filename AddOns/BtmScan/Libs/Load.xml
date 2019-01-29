@@ -1,0 +1,5 @@
+<Ui xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<Include file="DebugLib\Load.xml"/>
+	<Include file="Configator\Load.xml"/>
+	<Include file="SlideBar\Load.xml"/>
+</Ui>

@@ -1,0 +1,11 @@
+## Interface: 20430
+## Title: SchakaPvPUI
+## SavedVariables: CombatLogFixDB, SPB_Options, SolaceTargetOptions, SchakaPvPUI
+
+libs\LibStub\LibStub.lua
+libs\LibSimpleOptions-1.0\lib.xml
+
+SchakaPvPUI.lua
+CombatLogFix.lua
+CombatIndicator.lua
+ClassPortraits.lua

@@ -1,0 +1,4 @@
+## Interface: 20400
+## Title: SnowfallKeyPressAnimation
+## Notes: Custom button animation for SnowfallKeyPress
+SnowfallKeyPressAnimation.lua

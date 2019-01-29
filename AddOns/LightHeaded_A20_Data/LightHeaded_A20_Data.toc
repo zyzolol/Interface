@@ -1,0 +1,7 @@
+## Interface: 20300
+## Title: LightHeaded_A20_Data
+## Notes: Contains quest comments from http://www.wowhead.com for Alliance players levels 1-20
+## RequiredDeps: LightHeaded
+## LoadOnDemand: 1
+
+..\LightHeaded\Data\LH_AllianceQuests_20.lua

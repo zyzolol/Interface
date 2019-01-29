@@ -1,0 +1,40 @@
+## Title: Bottom Scanner
+## Notes: Allows you to monitor new auctions for bargains. [5.0.0 (BillyGoat)] This AddOn is licenced under the GNU GPL, see GPL.txt for details.
+##
+## Interface: 20400
+## LoadOnDemand: 1
+## Dependencies: EnhTooltip, Stubby
+## OptionalDeps: !nLog, DebugLib, Configator, SlideBar, Auctioneer, Auc-Util-Appraiser, BeanCounter
+## SavedVariables: BtmScanData
+##
+## Version: 5.0.0 (BillyGoat)
+## Revision: $Id: btmScan.toc 3502 2008-09-17 18:03:11Z root $
+## URL: http://auctioneeraddon.com/dl/BottomScanner/
+##
+
+Libs\Load.xml
+
+btmObject.lua
+btmLocales.lua
+btmPrices.lua
+btmSettings.lua
+btmMain.lua
+
+# Place the following modules in the order that you wish them to
+# be processed. An earlier module will have first crack at purchasing
+# the item, and will only be beaten if a later module can make more
+# profit.
+#
+# Evaluation modules:
+EvalResale.lua
+EvalAppraiser.lua
+EvalVendor.lua
+EvalDisenchant.lua
+EvalProspect.lua
+EvalSnatch.lua
+FilterItemType.lua
+FilterItemPrice.lua
+FilterTimeLeft.lua
+FilterItemQuality.lua
+EvalEnchantMats.lua
+EvalMatConvert.lua

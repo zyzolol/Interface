@@ -1,0 +1,32 @@
+------------------------------------------------------------------------
+r82173 | arrowmaster | 2008-09-29 06:25:41 -0400 (Mon, 29 Sep 2008) | 3 lines
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+Ace2:
+-fix AceComm's ChatFrame_MessageEventHandler hook
+-whoever told me they 'tested' this change on live and it worked fine can DIAF
+------------------------------------------------------------------------
+r82171 | arrowmaster | 2008-09-29 06:06:31 -0400 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceDB-2.0/AceDB-2.0.lua
+
+Ace2: remove a WotLK hack thats not needed anymore
+------------------------------------------------------------------------
+r82169 | arrowmaster | 2008-09-29 05:54:50 -0400 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceAddon-2.0/AceAddon-2.0.lua
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+   M /trunk/Ace2/AceDB-2.0/AceDB-2.0.lua
+   M /trunk/Ace2/AceDebug-2.0/AceDebug-2.0.lua
+   M /trunk/Ace2/AceEvent-2.0/AceEvent-2.0.lua
+   M /trunk/Ace2/AceHook-2.1/AceHook-2.1.lua
+   M /trunk/Ace2/AceLibrary/AceLibrary.lua
+   M /trunk/Ace2/AceLocale-2.2/AceLocale-2.2.lua
+   M /trunk/Ace2/AceModuleCore-2.0/AceModuleCore-2.0.lua
+   M /trunk/Ace2/AceOO-2.0/AceOO-2.0.lua
+   M /trunk/Ace2/AceTab-2.0/AceTab-2.0.lua
+
+Ace2: merge WotLK branch into trunk
+------------------------------------------------------------------------

@@ -1,0 +1,8 @@
+## Interface: 20300
+## Title: Lib: Graphical Timer Bars (GTB) - 1.0
+## Notes: Graphical timer bars libray
+## Author: Mayen
+## OptionalDeps: LibStub
+
+LibStub.lua
+GTB-1.0.xml

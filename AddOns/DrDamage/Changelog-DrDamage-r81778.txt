@@ -1,0 +1,53 @@
+------------------------------------------------------------------------
+r81778 | gagorian | 2008-09-16 07:57:38 -0400 (Tue, 16 Sep 2008) | 2 lines
+Changed paths:
+   M /trunk/DrDamage/Caster.lua
+
+DrDamage:
+- Schhh..
+------------------------------------------------------------------------
+r81725 | gagorian | 2008-09-14 12:49:05 -0400 (Sun, 14 Sep 2008) | 2 lines
+Changed paths:
+   M /trunk/DrDamage/Caster.lua
+
+DrDamage:
+- Whoops.
+------------------------------------------------------------------------
+r81724 | gagorian | 2008-09-14 12:24:07 -0400 (Sun, 14 Sep 2008) | 3 lines
+Changed paths:
+   M /trunk/DrDamage/Caster.lua
+
+DrDamage:
+- Added Debilitating Strike to physical only global modifier debuff table
+- I hate you Fisker
+------------------------------------------------------------------------
+r80905 | gagorian | 2008-08-24 17:32:08 -0400 (Sun, 24 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/DrDamage/DrDamage.lua
+
+DrDamage:
+- AB text on Blizzard actionbars is now enabled by default combined with IPopBar
+------------------------------------------------------------------------
+r80904 | gagorian | 2008-08-24 17:16:35 -0400 (Sun, 24 Aug 2008) | 3 lines
+Changed paths:
+   M /trunk/DrDamage/Caster.lua
+   M /trunk/DrDamage/DrDamage.lua
+
+DrDamage:
+- Added DrDamage:Calc(name, rank, tooltip, modify) for easier 3rd party addon support
+- Example: DrDamage:Calc("Shadow Bolt", "Rank 5", true) will return value, table. Where value is AB text and table contains all the tooltip info
+------------------------------------------------------------------------
+r80707 | gagorian | 2008-08-19 22:21:40 -0400 (Tue, 19 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/DrDamage/DrDamage.lua
+
+DrDamage:
+- Added back _G["BonusActionBarFrame"]:IsVisible() check for BonusActionButton 1-12, it's apparently needed :C
+------------------------------------------------------------------------
+r80581 | gagorian | 2008-08-17 09:21:41 -0400 (Sun, 17 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/DrDamage/Melee.lua
+
+DrDamage:
+- Fixed feral attacks needing a weapon.
+------------------------------------------------------------------------

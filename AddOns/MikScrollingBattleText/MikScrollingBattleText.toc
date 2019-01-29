@@ -1,0 +1,24 @@
+## Interface: 20400
+## Version: 5.2.14
+## Title: Mik's Scrolling Battle Text
+## Author: Mik
+## Notes: Scrolls battle information around the character model.
+## SavedVariables: MSBTProfiles_SavedVars
+## SavedVariablesPerCharacter: MSBTProfiles_SavedVarsPerChar
+MikSBT.lua
+Localization\localization.lua
+Localization\localization.de.lua
+Localization\localization.fr.lua
+Localization\localization.zhcn.lua
+Localization\localization.zhtw.lua
+Localization\localization.ru.lua
+MSBTProfiles.lua
+MSBTParser.lua
+MSBTAnimations.lua
+MSBTTriggers.lua
+MSBTCooldowns.lua
+MSBTMain.lua
+MSBTFonts.lua
+MSBTSounds.lua
+MSBTAnimationStyles.lua
+MSBTLegacy.lua

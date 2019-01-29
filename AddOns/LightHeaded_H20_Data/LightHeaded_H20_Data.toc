@@ -1,0 +1,7 @@
+## Interface: 20300
+## Title: LightHeaded_H20_Data
+## Notes: Contains quest comments from http://www.wowhead.com for Horde players levels 1-20
+## RequiredDeps: LightHeaded
+## LoadOnDemand: 1
+
+..\LightHeaded\Data\LH_HordeQuests_20.lua

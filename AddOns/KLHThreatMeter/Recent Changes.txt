@@ -1,0 +1,140 @@
+
+22.1
+
+* redid boss mods
+
+  - KTM will no longer sync bossmods (resets etc)
+
+  - new stuff in /bosses and /validation
+
+* taunt immune fix
+
+* devastate fix
+
+
+--------------------------------------------------------
+
+
+21.15
+
+* spell reflect
+
+
+21.14
+
+* confirmed fd fix.
+
+
+21.13
+
+* full clear at the of invisibility now working
+
+* fix that will hopefully stop FD resists being ignored.
+
+* Pain suppression
+
+* bracing earthstorm diamond
+
+
+21.12
+
+* updated zhTW localisation
+
+* soulshatter
+
+* fixed raidtable.onupdate error, and threat list out of order problems
+
+* fixed speech boss mods.
+
+
+21.11
+
+* Invisibility
+
+* stop possible garbage overload that might have been happening
+
+
+21.10
+
+* Removed the my threat option in help menu
+
+* Readded /ktm r
+
+* threat should properly clear on mobs when you wipe. Needs everyone to update though.
+
+* fixed error when someone of unknown class joins raid
+
+
+21.9
+
+* MD working
+
+* class filters working again on raid table
+
+* vanish
+
+
+21.8
+
+* FD
+
+
+21.7
+
+* Tank threat was way out, fixed.
+
+
+21.6
+
+* Bugfix.
+
+
+21.5
+
+* fixed the main source of errors
+
+* MD code (with debugs)
+
+
+21.4
+
+* threat list now shown for "yellow" / aggressive neutral mobs.
+
+* first hit entering combat should give threat.
+
+* added some stronger validation for threat = nil or name = nil errors.
+
+
+21.3
+
+* Fixed error caused by healing
+
+* Fixed copy/paste multiplied typo stopping lots of magic damage.
+
+
+21.2
+
+* Fixed typo in combat:340, and 351
+
+* Added back bars.
+
+* soulshatter with correct split resist / success
+
+* healing and powergain in.
+
+* There are a few debug prints left in, particularly with taunts, probably some other stuff.
+
+* 21 TODOs to go.
+
+* ready for testing.
+
+
+21.1
+
+This is a demonstration version of multi-mob threat. It's not quite ready for proper use, but it's mainly functional.
+
+Features:
+
+* Can track threat vs several mobs with the same name
+
+... and that's about it. It's very rough around the edges atm. It gets the active mob from your target.

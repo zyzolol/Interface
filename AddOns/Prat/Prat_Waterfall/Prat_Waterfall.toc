@@ -1,0 +1,12 @@
+﻿## Interface: 20400
+## Title: Prat |r[|cffeda55fWaterfall|r]
+## RequiredDeps: Prat
+## Author: Prat Development Team
+## X-License: GPLv2
+
+## X-Embeds: Waterfall-1.0
+
+## DefaultState: enabled
+## SavedVariables: PratAutoLOD
+
+includes.xml

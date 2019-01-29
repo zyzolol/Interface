@@ -1,0 +1,11 @@
+## Title: Babylonian
+## Notes: A localization library that allows localization in languages other than those supported by the client locale.
+##
+## Interface: 20400
+## LoadOnDemand: 0
+##
+## Version: 5.0.0 (BillyGoat)
+## Revision: $Id$
+## URL: http://auctioneeraddon.com/dl/
+##
+Load.xml

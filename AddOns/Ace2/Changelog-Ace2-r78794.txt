@@ -1,0 +1,19 @@
+------------------------------------------------------------------------
+r78794 | ckknight | 2008-07-20 13:35:39 -0400 (Sun, 20 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - set the hooks to pass in all arguments.
+------------------------------------------------------------------------
+r78793 | ckknight | 2008-07-20 13:31:14 -0400 (Sun, 20 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceComm-2.0/AceComm-2.0.lua
+
+.AceComm-2.0 - fix issue with ChatFrame_MessageEventHandler hook and WotLK
+------------------------------------------------------------------------
+r78792 | ckknight | 2008-07-20 13:22:36 -0400 (Sun, 20 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Ace2/AceConsole-2.0/AceConsole-2.0.lua
+
+.AceConsole-2.0 - make chat input handling work with WotLK
+------------------------------------------------------------------------

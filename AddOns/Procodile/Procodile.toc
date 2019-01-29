@@ -1,0 +1,25 @@
+## Interface: 20400
+## Title: Procodile
+## Notes: Gathers statistics on certain chance-on-use spells, also known as procs.
+## Notes-zhCN: 收集并统计触发式法术的几率和状态
+## Notes-zhTW: 收集並統計觸發式法術的幾率和狀態
+## Author: Zarnivoop
+## Version: 1.0
+
+## OptionalDeps: Ace3, LibSharedMedia-3.0, LibBars-1.0, LibSink-2.0
+## X-Embeds: Ace3, LibSharedMedia-3.0, LibBars-1.0, LibSink-2.0
+
+## SavedVariables: ProcodileDB
+## SavedVariablesPerCharacter: ProcodileDBPC
+
+## X-License: MIT/X
+## X-Category: Combat
+
+embeds.xml
+
+locale\enUS.lua
+locale\zhCN.lua
+locale\zhTW.lua
+
+Procodile.lua
+ProcodileFu.lua

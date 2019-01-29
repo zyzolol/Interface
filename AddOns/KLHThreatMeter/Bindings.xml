@@ -1,0 +1,28 @@
+<Bindings>
+	
+	<Binding name="KLHThreatMeter_hideshow" header="KLHThreatMeter">
+		if klhtm.raidtable.instances[1].gui:IsVisible() then klhtm.raidtable.instances[1].gui:Hide() else klhtm.raidtable.instances[1].gui:Show() end
+
+	</Binding>
+
+
+
+	<Binding name="KLHThreatMeter_stop">
+
+		klhtm.emergencystop()
+	</Binding>
+
+
+	<Binding name="KLHThreatMeter_mastertarget">
+
+		klhtm.target.sendmastertarget()
+	</Binding>
+
+
+	<Binding name="KLHThreatMeter_resetraid">
+
+		klhtm.table.sendraidreset()
+	</Binding>
+
+
+</Bindings>
